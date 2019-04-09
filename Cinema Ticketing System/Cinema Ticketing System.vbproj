@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD9DE371-D8B3-4AC3-8B9E-0845B8D7CA55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Cinema_Ticketing_System.My.MyApplication</StartupObject>
+    <RootNamespace>Cinema_Ticketing_System</RootNamespace>
+    <AssemblyName>Cinema Ticketing System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Cinema Ticketing System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Cinema Ticketing System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BookingReceipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="demo.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddHall.designer.vb">
+      <DependentUpon>FrmAddHall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddHall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHallLayoutEditor.Designer.vb">
+      <DependentUpon>FrmHallLayoutEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHallLayoutEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateHall.Designer.vb">
+      <DependentUpon>FrmUpdateHall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateHall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewHall.Designer.vb">
+      <DependentUpon>FrmViewHall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewHall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeBookingConfirm.Designer.vb">
+      <DependentUpon>MakeBookingConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MakeBookingConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBooking.Designer.vb">
+      <DependentUpon>DeleteBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homescreen.Designer.vb">
+      <DependentUpon>Homescreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Homescreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeBooking.Designer.vb">
+      <DependentUpon>MakeBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MakeBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieTicket.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieTicket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewPurchase.Designer.vb">
+      <DependentUpon>NewPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintBookingReceipt.Designer.vb">
+      <DependentUpon>PrintBookingReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintBookingReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintMovieTicket.Designer.vb">
+      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintMovieTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseConfirm.Designer.vb">
+      <DependentUpon>PurchaseConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseSummary.Designer.vb">
+      <DependentUpon>PurchaseSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelection.Designer.vb">
+      <DependentUpon>SeatSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBooking.Designer.vb">
+      <DependentUpon>UpdateBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBookingConfirm.Designer.vb">
+      <DependentUpon>UpdateBookingConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBookingConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBookingList.Designer.vb">
+      <DependentUpon>ViewBookingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBookingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BookingReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingReceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBooking.resx">
+      <DependentUpon>DeleteBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="demo.dbml.layout">
+      <DependentUpon>demo.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FrmAddHall.resx">
+      <DependentUpon>FrmAddHall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHallLayoutEditor.resx">
+      <DependentUpon>FrmHallLayoutEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateHall.resx">
+      <DependentUpon>FrmUpdateHall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewHall.resx">
+      <DependentUpon>FrmViewHall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homescreen.resx">
+      <DependentUpon>Homescreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeBooking.resx">
+      <DependentUpon>MakeBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MovieTicket.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPurchase.resx">
+      <DependentUpon>NewPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintBookingReceipt.resx">
+      <DependentUpon>PrintBookingReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintMovieTicket.resx">
+      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseConfirm.resx">
+      <DependentUpon>PurchaseConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseSummary.resx">
+      <DependentUpon>PurchaseSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelection.resx">
+      <DependentUpon>SeatSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBooking.resx">
+      <DependentUpon>UpdateBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBookingConfirm.resx">
+      <DependentUpon>UpdateBookingConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBookingList.resx">
+      <DependentUpon>ViewBookingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeBookingConfirm.resx">
+      <DependentUpon>MakeBookingConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="demo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>demo.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.mdf" />
+    <Content Include="Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\cinema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
