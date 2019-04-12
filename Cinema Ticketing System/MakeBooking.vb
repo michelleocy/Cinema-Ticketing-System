@@ -109,10 +109,10 @@ Public Class MakeBooking
             Next
         End If
 
-        Dim rs3 = (From o In db.Halls
+        Dim rs3 = (From o In db.MovieSchedules
                    Where o.Id = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)).FirstOrDefault
 
-        seatAmount = rs3.Seats.Count
+        seatAmount = rs3.Hall.Seats.Count
         nudAmount.Maximum = seatAmount - count
 
     End Sub
