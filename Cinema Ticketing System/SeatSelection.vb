@@ -1,6 +1,8 @@
 ﻿Public Class SeatSelection
 
     Public movieScheduleId As Integer
+    Public amountSeatRequired As Integer
+    Private seatSelected As Integer = 0
     Private seats As New List(Of Seat)
 
     Private Sub SeatSelection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -38,13 +40,21 @@
     End Sub
 
     Private Sub button_Click(sender As Object, e As EventArgs)
+
         Dim btn As Button = CType(sender, Button)
+
         If btn.BackColor = Color.LightGreen Then
-            btn.BackColor = Color.White
+            If seatSelected = amountSeatRequired Then
+                MessageBox.Show("Amount exceeded!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                btn.BackColor = Color.White
+                seatSelected += 1
+            End If
         ElseIf btn.BackColor = Color.White Then
             btn.BackColor = Color.LightGreen
-        End If
+            seatSelected -= 1
 
+        End If
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click

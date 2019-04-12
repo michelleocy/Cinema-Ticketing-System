@@ -53,6 +53,7 @@
 
         SeatSelection.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
         PurchaseSummary.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+        SeatSelection.amountSeatRequired = Integer.Parse(nudAmount.Text)
         Me.Hide()
         SeatSelection.ShowDialog()
 
@@ -82,10 +83,10 @@
             Next
         End If
 
-        Dim rs3 = (From o In db.Halls
+        Dim rs3 = (From o In db.MovieSchedules
                    Where o.Id = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)).FirstOrDefault
 
-        seatAmount = rs3.Seats.Count
+        seatAmount = rs3.Hall.Seats.Count
         nudAmount.Maximum = seatAmount - count
 
     End Sub
@@ -101,20 +102,6 @@
 
         Me.Hide()
         ViewBookingList.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
 
     End Sub
 

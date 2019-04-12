@@ -26,9 +26,6 @@ Partial Class Homescreen
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuBookingUpdate = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.mnuCinema.SuspendLayout()
@@ -46,7 +43,7 @@ Partial Class Homescreen
         '
         'mnuBooking
         '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList, Me.ToolStripSeparator2, Me.mnuBookingUpdate, Me.mnuBookingDelete})
+        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
         Me.mnuBooking.Name = "mnuBooking"
         Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
         Me.mnuBooking.Text = "&Booking"
@@ -54,31 +51,14 @@ Partial Class Homescreen
         'mnuBookingMakeBooking
         '
         Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(216, 26)
         Me.mnuBookingMakeBooking.Text = "&Make Booking"
         '
         'mnuBookingList
         '
         Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingList.Size = New System.Drawing.Size(216, 26)
         Me.mnuBookingList.Text = "Booking &List"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(181, 6)
-        '
-        'mnuBookingUpdate
-        '
-        Me.mnuBookingUpdate.Name = "mnuBookingUpdate"
-        Me.mnuBookingUpdate.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingUpdate.Text = "&Update Record"
-        '
-        'mnuBookingDelete
-        '
-        Me.mnuBookingDelete.Name = "mnuBookingDelete"
-        Me.mnuBookingDelete.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingDelete.Text = "&Delete Record"
         '
         'mnuExit
         '
@@ -119,9 +99,6 @@ Partial Class Homescreen
     Friend WithEvents mnuBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents mnuBookingUpdate As ToolStripMenuItem
-    Friend WithEvents mnuBookingDelete As ToolStripMenuItem
     Friend WithEvents lblWelcome As Label
     Friend WithEvents mnuExit As ToolStripMenuItem
 End Class

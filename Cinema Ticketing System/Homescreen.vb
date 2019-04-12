@@ -14,20 +14,6 @@
 
     End Sub
 
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
-
-    End Sub
-
     Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
 
         End

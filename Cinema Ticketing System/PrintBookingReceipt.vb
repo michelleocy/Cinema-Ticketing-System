@@ -7,32 +7,36 @@ Public Class PrintBookingReceipt
 
     Private Sub PrintBookingReceipt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        lblName.Text = selectedBooking
+        'lblName.Text = selectedBooking
 
-        Dim ds As New DatabaseDataSet
-        Dim ad As New DatabaseDataSetTableAdapters.BookingTableAdapter
+        'Dim db As New demoDataContext
+        'Dim rs = (From o In db.Bookings).Last
 
-        ad.Fill(ds.Booking)
 
-        Dim rpt As New BookingReceipt
-        rpt.SetDataSource(ds)
+        'Dim ds As New DatabaseDataSet
+        'Dim ad As New DatabaseDataSetTableAdapters.BookingTableAdapter
 
-        Dim crParameterFieldDefinitions As ParameterFieldDefinitions
-        Dim crParameterFieldDefinition As ParameterFieldDefinition
-        Dim crParameterValues As New ParameterValues
-        Dim crParameterDiscreteValue As New ParameterDiscreteValue
+        'ad.Fill(ds.Booking)
 
-        crParameterDiscreteValue.Value = lblName.Text
-        crParameterFieldDefinitions = rpt.DataDefinition.ParameterFields
-        crParameterFieldDefinition = crParameterFieldDefinitions.Item("Customer Name")
-        crParameterValues = crParameterFieldDefinition.CurrentValues
+        'Dim rpt As New BookingReceipt
+        'rpt.SetDataSource(ds)
 
-        crParameterValues.Clear()
-        crParameterValues.Add(crParameterDiscreteValue)
-        crParameterFieldDefinition.ApplyCurrentValues(crParameterValues)
+        'Dim crParameterFieldDefinitions As ParameterFieldDefinitions
+        'Dim crParameterFieldDefinition As ParameterFieldDefinition
+        'Dim crParameterValues As New ParameterValues
+        'Dim crParameterDiscreteValue As New ParameterDiscreteValue
 
-        crvBookingReceipt.ReportSource = rpt
-        crvBookingReceipt.Refresh()
+        'crParameterDiscreteValue.Value = lblName.Text
+        'crParameterFieldDefinitions = rpt.DataDefinition.ParameterFields
+        'crParameterFieldDefinition = crParameterFieldDefinitions.Item("Customer Name")
+        'crParameterValues = crParameterFieldDefinition.CurrentValues
+
+        'crParameterValues.Clear()
+        'crParameterValues.Add(crParameterDiscreteValue)
+        'crParameterFieldDefinition.ApplyCurrentValues(crParameterValues)
+
+        'crvBookingReceipt.ReportSource = rpt
+        'crvBookingReceipt.Refresh()
 
     End Sub
 
@@ -47,20 +51,6 @@ Public Class PrintBookingReceipt
 
         Me.Hide()
         ViewBookingList.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
 
     End Sub
 

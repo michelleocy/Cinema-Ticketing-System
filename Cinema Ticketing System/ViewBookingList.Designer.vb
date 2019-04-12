@@ -28,21 +28,20 @@ Partial Class ViewBookingList
         Me.DatabaseDataSet = New Cinema_Ticketing_System.DatabaseDataSet()
         Me.lblName = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.BookingTableAdapter = New Cinema_Ticketing_System.DatabaseDataSetTableAdapters.BookingTableAdapter()
         Me.mnuCinema = New System.Windows.Forms.MenuStrip()
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuBookingUpdate = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,9 +56,9 @@ Partial Class ViewBookingList
         Me.dgvBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvBooking.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.dgvBooking.DataSource = Me.BookingBindingSource
+        Me.dgvBooking.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvBooking.Location = New System.Drawing.Point(12, 86)
         Me.dgvBooking.Name = "dgvBooking"
-        Me.dgvBooking.ReadOnly = True
         Me.dgvBooking.RowTemplate.Height = 24
         Me.dgvBooking.Size = New System.Drawing.Size(748, 217)
         Me.dgvBooking.TabIndex = 0
@@ -72,7 +71,6 @@ Partial Class ViewBookingList
         'DatabaseDataSet
         '
         Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblName
         '
@@ -90,6 +88,24 @@ Partial Class ViewBookingList
         Me.txtName.Size = New System.Drawing.Size(163, 22)
         Me.txtName.TabIndex = 2
         '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(379, 31)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(104, 42)
+        Me.btnDelete.TabIndex = 10
+        Me.btnDelete.Text = "&Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Location = New System.Drawing.Point(259, 31)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(104, 42)
+        Me.btnPrint.TabIndex = 14
+        Me.btnPrint.Text = "&Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'BookingTableAdapter
         '
         Me.BookingTableAdapter.ClearBeforeFill = True
@@ -101,12 +117,12 @@ Partial Class ViewBookingList
         Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
         Me.mnuCinema.Name = "mnuCinema"
         Me.mnuCinema.Size = New System.Drawing.Size(772, 28)
-        Me.mnuCinema.TabIndex = 3
+        Me.mnuCinema.TabIndex = 15
         Me.mnuCinema.Text = "MenuStrip1"
         '
         'mnuBooking
         '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList, Me.ToolStripSeparator2, Me.mnuBookingUpdate, Me.mnuBookingDelete})
+        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
         Me.mnuBooking.Name = "mnuBooking"
         Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
         Me.mnuBooking.Text = "&Booking"
@@ -114,72 +130,20 @@ Partial Class ViewBookingList
         'mnuBookingMakeBooking
         '
         Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingMakeBooking.Text = "&Make Booking"
         '
         'mnuBookingList
         '
         Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingList.Text = "Booking &List"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(181, 6)
-        '
-        'mnuBookingUpdate
-        '
-        Me.mnuBookingUpdate.Name = "mnuBookingUpdate"
-        Me.mnuBookingUpdate.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingUpdate.Text = "&Update Record"
-        '
-        'mnuBookingDelete
-        '
-        Me.mnuBookingDelete.Name = "mnuBookingDelete"
-        Me.mnuBookingDelete.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingDelete.Text = "&Delete Record"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.Size = New System.Drawing.Size(45, 24)
         Me.mnuExit.Text = "E&xit"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "BookingDate"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Booking Date"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "AmountOfPeople"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Amount"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "MovieScheduleID"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Schedule ID"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "CustomerIC"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "IC"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "CustomerName"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -188,12 +152,48 @@ Partial Class ViewBookingList
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "CustomerName"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "CustomerIC"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "IC"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "MovieScheduleID"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Schedule ID"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "AmountOfPeople"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "BookingDate"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Booking Date"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
         'ViewBookingList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 315)
+        Me.ClientSize = New System.Drawing.Size(772, 327)
         Me.Controls.Add(Me.mnuCinema)
+        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.dgvBooking)
@@ -211,14 +211,16 @@ Partial Class ViewBookingList
     End Sub
 
     Friend WithEvents dgvBooking As DataGridView
-    Friend WithEvents lblName As Label
-    Friend WithEvents txtName As TextBox
     Friend WithEvents BookingIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CustomerNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CustomerICDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MovieScheduleIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AmountOfPeopleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BookingDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents lblName As Label
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnPrint As Button
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents BookingBindingSource As BindingSource
     Friend WithEvents BookingTableAdapter As DatabaseDataSetTableAdapters.BookingTableAdapter
@@ -226,9 +228,6 @@ Partial Class ViewBookingList
     Friend WithEvents mnuBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents mnuBookingUpdate As ToolStripMenuItem
-    Friend WithEvents mnuBookingDelete As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
