@@ -53,6 +53,7 @@
 
         SeatSelection.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
         PurchaseSummary.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+        SeatSelection.amountSeatRequired = Integer.Parse(nudAmount.Text)
         Me.Hide()
         SeatSelection.ShowDialog()
 
@@ -101,20 +102,6 @@
 
         Me.Hide()
         ViewBookingList.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
 
     End Sub
 

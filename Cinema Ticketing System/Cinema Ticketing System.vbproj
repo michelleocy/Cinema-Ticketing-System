@@ -97,12 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BookingReceipt.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookingReceipt.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,12 +143,6 @@
     <Compile Include="MakeBookingConfirm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteBooking.Designer.vb">
-      <DependentUpon>DeleteBooking.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteBooking.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Homescreen.Designer.vb">
       <DependentUpon>Homescreen.vb</DependentUpon>
     </Compile>
@@ -166,12 +154,6 @@
     </Compile>
     <Compile Include="MakeBooking.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MovieTicket.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MovieTicket.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -230,18 +212,6 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateBooking.Designer.vb">
-      <DependentUpon>UpdateBooking.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateBooking.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateBookingConfirm.Designer.vb">
-      <DependentUpon>UpdateBookingConfirm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateBookingConfirm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ViewBookingList.Designer.vb">
       <DependentUpon>ViewBookingList.vb</DependentUpon>
     </Compile>
@@ -250,13 +220,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BookingReceipt.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BookingReceipt.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteBooking.resx">
-      <DependentUpon>DeleteBooking.vb</DependentUpon>
-    </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -292,18 +255,11 @@
     <EmbeddedResource Include="MakeBooking.resx">
       <DependentUpon>MakeBooking.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovieTicket.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>MovieTicket.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="NewPurchase.resx">
       <DependentUpon>NewPurchase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintBookingReceipt.resx">
       <DependentUpon>PrintBookingReceipt.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrintMovieTicket.resx">
-      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseConfirm.resx">
       <DependentUpon>PurchaseConfirm.vb</DependentUpon>
@@ -316,12 +272,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateBooking.resx">
-      <DependentUpon>UpdateBooking.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateBookingConfirm.resx">
-      <DependentUpon>UpdateBookingConfirm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBookingList.resx">
       <DependentUpon>ViewBookingList.vb</DependentUpon>

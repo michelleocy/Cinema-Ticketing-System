@@ -24,15 +24,10 @@ Partial Class PrintBookingReceipt
     Private Sub InitializeComponent()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.crvBookingReceipt = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.BookingReceipt1 = New Cinema_Ticketing_System.BookingReceipt()
         Me.mnuCinema = New System.Windows.Forms.MenuStrip()
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuBookingUpdate = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
@@ -55,18 +50,6 @@ Partial Class PrintBookingReceipt
         Me.lblTitle.TabIndex = 8
         Me.lblTitle.Text = "Booked by : "
         '
-        'crvBookingReceipt
-        '
-        Me.crvBookingReceipt.ActiveViewIndex = 0
-        Me.crvBookingReceipt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crvBookingReceipt.Cursor = System.Windows.Forms.Cursors.Default
-        Me.crvBookingReceipt.Location = New System.Drawing.Point(13, 71)
-        Me.crvBookingReceipt.Name = "crvBookingReceipt"
-        Me.crvBookingReceipt.ReportSource = Me.BookingReceipt1
-        Me.crvBookingReceipt.Size = New System.Drawing.Size(775, 367)
-        Me.crvBookingReceipt.TabIndex = 10
-        Me.crvBookingReceipt.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
         'mnuCinema
         '
         Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -79,7 +62,7 @@ Partial Class PrintBookingReceipt
         '
         'mnuBooking
         '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList, Me.ToolStripSeparator2, Me.mnuBookingUpdate, Me.mnuBookingDelete})
+        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
         Me.mnuBooking.Name = "mnuBooking"
         Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
         Me.mnuBooking.Text = "&Booking"
@@ -87,31 +70,14 @@ Partial Class PrintBookingReceipt
         'mnuBookingMakeBooking
         '
         Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingMakeBooking.Text = "&Make Booking"
         '
         'mnuBookingList
         '
         Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(184, 26)
+        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingList.Text = "Booking &List"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(181, 6)
-        '
-        'mnuBookingUpdate
-        '
-        Me.mnuBookingUpdate.Name = "mnuBookingUpdate"
-        Me.mnuBookingUpdate.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingUpdate.Text = "&Update Record"
-        '
-        'mnuBookingDelete
-        '
-        Me.mnuBookingDelete.Name = "mnuBookingDelete"
-        Me.mnuBookingDelete.Size = New System.Drawing.Size(184, 26)
-        Me.mnuBookingDelete.Text = "&Delete Record"
         '
         'mnuExit
         '
@@ -125,12 +91,11 @@ Partial Class PrintBookingReceipt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.mnuCinema)
-        Me.Controls.Add(Me.crvBookingReceipt)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "PrintBookingReceipt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "z"
+        Me.Text = "Booking Receipt"
         Me.mnuCinema.ResumeLayout(False)
         Me.mnuCinema.PerformLayout()
         Me.ResumeLayout(False)
@@ -139,14 +104,9 @@ Partial Class PrintBookingReceipt
     End Sub
     Friend WithEvents lblName As Label
     Friend WithEvents lblTitle As Label
-    Friend WithEvents crvBookingReceipt As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents BookingReceipt1 As BookingReceipt
     Friend WithEvents mnuCinema As MenuStrip
     Friend WithEvents mnuBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents mnuBookingUpdate As ToolStripMenuItem
-    Friend WithEvents mnuBookingDelete As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
 End Class

@@ -2,10 +2,17 @@
 
     Public selectedBooking As String
 
-    Private Sub MakeBookingConfirm_Load(sender As Object, e As EventArgs)
+    Private Sub MakeBookingConfirm_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         lblName.Text = selectedBooking
         PrintBookingReceipt.selectedBooking = lblName.Text
+
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+
+        Me.Hide()
+        PrintBookingReceipt.ShowDialog()
 
     End Sub
 
@@ -23,30 +30,9 @@
 
     End Sub
 
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
-
-    End Sub
-
     Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
 
         End
-
-    End Sub
-
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs)
-
-        Me.Hide()
-        PrintBookingReceipt.ShowDialog()
 
     End Sub
 

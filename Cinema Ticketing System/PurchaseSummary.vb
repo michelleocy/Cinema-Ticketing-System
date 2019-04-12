@@ -39,9 +39,23 @@
         db.SubmitChanges()
 
         PurchaseConfirm.purchaseId = purchase.PurchaseID
-        PrintMovieTicket.purchaseId = purchase.PurchaseID
+        'PrintMovieTicket.purchaseId = purchase.PurchaseID
         Me.Hide()
         PurchaseConfirm.ShowDialog()
+
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+
+        Dim str As String = "Are you sure to cancel ?"
+        Dim resultDlg As Integer = MessageBox.Show(str, "Cancelation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
+        If resultDlg = DialogResult.Cancel Then
+            Exit Sub
+        ElseIf resultDlg = DialogResult.OK Then
+            Close()
+            NewPurchase.Show()
+        End If
 
     End Sub
 
@@ -59,37 +73,9 @@
 
     End Sub
 
-    Private Sub mnuBookingUpdate_Click(sender As Object, e As EventArgs) Handles mnuBookingUpdate.Click
-
-        Me.Hide()
-        UpdateBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingDelete_Click(sender As Object, e As EventArgs) Handles mnuBookingDelete.Click
-
-        Me.Hide()
-        DeleteBooking.ShowDialog()
-
-    End Sub
-
     Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
 
         End
-
-    End Sub
-
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-
-        Dim str As String = "Are you sure to cancel ?"
-        Dim resultDlg As Integer = MessageBox.Show(str, "Cancelation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
-
-        If resultDlg = DialogResult.Cancel Then
-            Exit Sub
-        ElseIf resultDlg = DialogResult.OK Then
-            Close()
-            NewPurchase.Show()
-        End If
 
     End Sub
 End Class
