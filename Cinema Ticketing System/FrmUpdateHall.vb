@@ -47,4 +47,8 @@
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Close()
     End Sub
+
+    Private Sub btnManageSeat_Click(sender As Object, e As EventArgs) Handles btnManageSeat.Click
+
+    End Sub
 End Class
