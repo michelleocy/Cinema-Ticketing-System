@@ -13,10 +13,18 @@
 
         If rs.Count > 0 Then
             For Each item In rs
-                cboMovie.Items.Add(New DictionaryEntry(item.MovieID, item.Movie.MovieName))
+                Dim existed As Boolean = False
+                For Each i In cboMovie.Items
+                    If i.value.ToString = item.Movie.MovieName Then
+                        existed = True
+                        Exit For
+                    End If
+                Next
+                If existed = False Then
+                    cboMovie.Items.Add(New DictionaryEntry(item.MovieID, item.Movie.MovieName))
+                End If
             Next
         End If
-
     End Sub
 
     Private Sub cboMovie_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMovie.SelectedIndexChanged

@@ -4,14 +4,14 @@
 
         Me.Hide()
         MakeBooking.ShowDialog()
-
+        Me.Show()
     End Sub
 
     Private Sub mnuBookingList_Click(sender As Object, e As EventArgs) Handles mnuBookingList.Click
 
         Me.Hide()
         ViewBookingList.ShowDialog()
-
+        Me.Show()
     End Sub
 
     Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
@@ -24,7 +24,7 @@
 
         Me.Hide()
         NewPurchase.ShowDialog()
-
+        Me.Show()
     End Sub
 
     Private Sub mnuHall_Click(sender As Object, e As EventArgs) Handles mnuHall.Click

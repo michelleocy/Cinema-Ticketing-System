@@ -25,47 +25,53 @@ Partial Class FrmGenerateReport
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGenerateReport))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.cboMonth = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGenerate = New System.Windows.Forms.Button()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.cboYear = New System.Windows.Forms.ComboBox()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Seat Report"})
-        Me.ComboBox1.Location = New System.Drawing.Point(159, 188)
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 25)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
         '
         'cboMonth
         '
+        Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMonth.Enabled = False
         Me.cboMonth.FormattingEnabled = True
-        Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cboMonth.Location = New System.Drawing.Point(519, 187)
+        Me.cboMonth.Location = New System.Drawing.Point(12, 128)
         Me.cboMonth.Name = "cboMonth"
         Me.cboMonth.Size = New System.Drawing.Size(121, 21)
         Me.cboMonth.TabIndex = 1
         '
-        'Button1
+        'btnGenerate
         '
-        Me.Button1.Location = New System.Drawing.Point(378, 348)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGenerate.Location = New System.Drawing.Point(12, 170)
+        Me.btnGenerate.Name = "btnGenerate"
+        Me.btnGenerate.Size = New System.Drawing.Size(75, 23)
+        Me.btnGenerate.TabIndex = 2
+        Me.btnGenerate.Text = "Generate"
+        Me.btnGenerate.UseVisualStyleBackColor = True
         '
         'doc
         '
+        Me.doc.OriginAtMargins = True
         '
         'cboYear
         '
+        Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Items.AddRange(New Object() {"2019"})
-        Me.cboYear.Location = New System.Drawing.Point(505, 132)
+        Me.cboYear.Location = New System.Drawing.Point(12, 77)
         Me.cboYear.Name = "cboYear"
         Me.cboYear.Size = New System.Drawing.Size(121, 21)
         Me.cboYear.TabIndex = 3
@@ -80,25 +86,59 @@ Partial Class FrmGenerateReport
         Me.dlgPreview.Name = "dlgPreview"
         Me.dlgPreview.Visible = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Report Type:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(74, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Choose Year: "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 112)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Choose Month:"
+        '
         'FrmGenerateReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(174, 219)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboYear)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.cboMonth)
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "FrmGenerateReport"
-        Me.Text = "FrmGenerateReport"
+        Me.Text = "Report"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents cboMonth As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGenerate As Button
     Friend WithEvents doc As Printing.PrintDocument
     Friend WithEvents cboYear As ComboBox
     Friend WithEvents dlgPreview As PrintPreviewDialog
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class
