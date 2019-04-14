@@ -23,6 +23,7 @@
             lblSeat.Text += item.SeatNum + " "
         Next
 
+        PurchaseConfirm.selectedSeat = lblSeat.Text
         lblPrice.Text = totalPrice.ToString("0.00")
 
     End Sub

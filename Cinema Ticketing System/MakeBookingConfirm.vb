@@ -1,18 +1,20 @@
-﻿Public Class MakeBookingConfirm
+﻿Imports System.Text
+Imports System.Data.SqlClient
 
-    Public selectedBooking As String
+Public Class MakeBookingConfirm
+
+    Public currentBooking As String
 
     Private Sub MakeBookingConfirm_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        lblName.Text = selectedBooking
-        PrintBookingReceipt.selectedBooking = lblName.Text
+        lblName.Text = currentBooking
 
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
 
         Me.Hide()
-        PrintBookingReceipt.ShowDialog()
+        Homescreen.ShowDialog()
 
     End Sub
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class PrintBookingReceipt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,93 +20,110 @@ Partial Class PrintBookingReceipt
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
-        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuCinema.SuspendLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PrintBookingReceipt))
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.control = New System.Windows.Forms.PrintPreviewControl()
+        Me.dialog = New System.Windows.Forms.PrintDialog()
+        Me.tsBooking = New System.Windows.Forms.ToolStrip()
+        Me.btnPrint = New System.Windows.Forms.ToolStripButton()
+        Me.btnZoomIn = New System.Windows.Forms.ToolStripButton()
+        Me.btnZoomOut = New System.Windows.Forms.ToolStripButton()
+        Me.btnClose = New System.Windows.Forms.ToolStripButton()
+        Me.tsBooking.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lblName
+        'doc
         '
-        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblName.Location = New System.Drawing.Point(111, 35)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(135, 23)
-        Me.lblName.TabIndex = 9
-        Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblTitle
+        'control
         '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Location = New System.Drawing.Point(18, 39)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(87, 17)
-        Me.lblTitle.TabIndex = 8
-        Me.lblTitle.Text = "Booked by : "
+        Me.control.AutoZoom = False
+        Me.control.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.control.Document = Me.doc
+        Me.control.Location = New System.Drawing.Point(0, 0)
+        Me.control.Name = "control"
+        Me.control.Size = New System.Drawing.Size(800, 450)
+        Me.control.TabIndex = 0
+        Me.control.Zoom = 0.32272727272727275R
         '
-        'mnuCinema
+        'dialog
         '
-        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
-        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
-        Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Size = New System.Drawing.Size(800, 28)
-        Me.mnuCinema.TabIndex = 11
-        Me.mnuCinema.Text = "MenuStrip1"
+        Me.dialog.UseEXDialog = True
         '
-        'mnuBooking
+        'tsBooking
         '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
-        Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
-        Me.mnuBooking.Text = "&Booking"
+        Me.tsBooking.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.tsBooking.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnPrint, Me.btnZoomIn, Me.btnZoomOut, Me.btnClose})
+        Me.tsBooking.Location = New System.Drawing.Point(0, 0)
+        Me.tsBooking.Name = "tsBooking"
+        Me.tsBooking.Size = New System.Drawing.Size(800, 25)
+        Me.tsBooking.TabIndex = 2
         '
-        'mnuBookingMakeBooking
+        'btnPrint
         '
-        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingMakeBooking.Text = "&Make Booking"
+        Me.btnPrint.BackgroundImage = CType(resources.GetObject("btnPrint.BackgroundImage"), System.Drawing.Image)
+        Me.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(23, 22)
+        Me.btnPrint.Text = "&Print"
         '
-        'mnuBookingList
+        'btnZoomIn
         '
-        Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingList.Text = "Booking &List"
+        Me.btnZoomIn.BackgroundImage = CType(resources.GetObject("btnZoomIn.BackgroundImage"), System.Drawing.Image)
+        Me.btnZoomIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnZoomIn.Name = "btnZoomIn"
+        Me.btnZoomIn.Size = New System.Drawing.Size(23, 22)
+        Me.btnZoomIn.Text = "Zoom &In"
         '
-        'mnuExit
+        'btnZoomOut
         '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
-        Me.mnuExit.Text = "E&xit"
+        Me.btnZoomOut.BackgroundImage = CType(resources.GetObject("btnZoomOut.BackgroundImage"), System.Drawing.Image)
+        Me.btnZoomOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnZoomOut.Name = "btnZoomOut"
+        Me.btnZoomOut.Size = New System.Drawing.Size(23, 22)
+        Me.btnZoomOut.Text = "Zoom &Out"
+        '
+        'btnClose
+        '
+        Me.btnClose.BackgroundImage = CType(resources.GetObject("btnClose.BackgroundImage"), System.Drawing.Image)
+        Me.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(23, 22)
+        Me.btnClose.Text = "&Close"
         '
         'PrintBookingReceipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.mnuCinema)
-        Me.Controls.Add(Me.lblName)
-        Me.Controls.Add(Me.lblTitle)
+        Me.Controls.Add(Me.tsBooking)
+        Me.Controls.Add(Me.control)
         Me.Name = "PrintBookingReceipt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Booking Receipt"
-        Me.mnuCinema.ResumeLayout(False)
-        Me.mnuCinema.PerformLayout()
+        Me.tsBooking.ResumeLayout(False)
+        Me.tsBooking.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblName As Label
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents mnuCinema As MenuStrip
-    Friend WithEvents mnuBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
+
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents control As PrintPreviewControl
+    Friend WithEvents dialog As PrintDialog
+    Friend WithEvents tsBooking As ToolStrip
+    Friend WithEvents btnZoomIn As ToolStripButton
+    Friend WithEvents btnZoomOut As ToolStripButton
+    Friend WithEvents btnPrint As ToolStripButton
+    Friend WithEvents btnClose As ToolStripButton
 End Class

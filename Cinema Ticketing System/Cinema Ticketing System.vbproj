@@ -261,6 +261,9 @@
     <EmbeddedResource Include="PrintBookingReceipt.resx">
       <DependentUpon>PrintBookingReceipt.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintMovieTicket.resx">
+      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PurchaseConfirm.resx">
       <DependentUpon>PurchaseConfirm.vb</DependentUpon>
     </EmbeddedResource>
@@ -304,13 +307,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\cinema.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -328,6 +324,13 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.mdf" />
+    <Content Include="Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\logo_mt_cl_transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -46,7 +46,7 @@ Public Class MakeBooking
             db.Bookings.InsertOnSubmit(b)
             db.SubmitChanges()
 
-            MakeBookingConfirm.selectedBooking = txtName.Text
+            MakeBookingConfirm.currentBooking = txtName.Text
             Me.Hide()
             MakeBookingConfirm.ShowDialog()
         End If
@@ -131,12 +131,6 @@ Public Class MakeBooking
                 cboMovieName.Items.Add(New DictionaryEntry(item.MovieID, item.Movie.MovieName))
             Next
         End If
-
-    End Sub
-
-    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs) Handles mnuBookingMakeBooking.Click
-
-        Me.ShowDialog()
 
     End Sub
 

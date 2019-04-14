@@ -17,8 +17,8 @@
       <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Association Name="Hall_Seat" Member="Seats" ThisKey="Id" OtherKey="HallId" Type="Seat" />
       <Association Name="Hall_MovieSchedule" Member="MovieSchedules" ThisKey="Id" OtherKey="HallId" Type="MovieSchedule" />
+      <Association Name="Hall_Seat" Member="Seats" ThisKey="Id" OtherKey="HallId" Type="Seat" />
     </Type>
   </Table>
   <Table Name="dbo.Movie" Member="Movies">
@@ -29,15 +29,6 @@
       <Column Name="MoviePoster" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="Duration" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
       <Association Name="Movie_MovieSchedule" Member="MovieSchedules" ThisKey="Id" OtherKey="MovieID" Type="MovieSchedule" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Seat" Member="Seats">
-    <Type Name="Seat">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SeatNo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
-      <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="HallId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Hall_Seat" Member="Hall" ThisKey="HallId" OtherKey="Id" Type="Hall" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MovieSchedule" Member="MovieSchedules">
@@ -54,14 +45,6 @@
       <Association Name="Movie_MovieSchedule" Member="Movie" ThisKey="MovieID" OtherKey="Id" Type="Movie" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PurchasedSeat" Member="PurchasedSeats">
-    <Type Name="PurchasedSeat">
-      <Column Name="PurchasedSeatID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SeatNum" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
-      <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Purchase_PurchasedSeat" Member="Purchase" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="Purchase" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Purchase" Member="Purchases">
     <Type Name="Purchase">
       <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -70,6 +53,23 @@
       <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
       <Association Name="Purchase_PurchasedSeat" Member="PurchasedSeats" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="PurchasedSeat" />
       <Association Name="MovieSchedule_Purchase" Member="MovieSchedule" ThisKey="MovieScheduleID" OtherKey="Id" Type="MovieSchedule" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Seat" Member="Seats">
+    <Type Name="Seat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeatNo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HallId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Hall_Seat" Member="Hall" ThisKey="HallId" OtherKey="Id" Type="Hall" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchasedSeat" Member="PurchasedSeats">
+    <Type Name="PurchasedSeat">
+      <Column Name="PurchasedSeatID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeatNum" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Purchase_PurchasedSeat" Member="Purchase" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="Purchase" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

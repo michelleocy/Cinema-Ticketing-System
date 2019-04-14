@@ -22,6 +22,7 @@ Partial Class PurchaseConfirm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PurchaseConfirm))
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.lblPurchaseId = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -31,6 +32,8 @@ Partial Class PurchaseConfirm
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -106,6 +109,21 @@ Partial Class PurchaseConfirm
         Me.mnuExit.Size = New System.Drawing.Size(45, 24)
         Me.mnuExit.Text = "E&xit"
         '
+        'doc
+        '
+        Me.doc.OriginAtMargins = True
+        '
+        'dlgPreview
+        '
+        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPreview.Enabled = True
+        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPreview.Name = "dlgPreview"
+        Me.dlgPreview.UseAntiAlias = True
+        Me.dlgPreview.Visible = False
+        '
         'PurchaseConfirm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -134,4 +152,6 @@ Partial Class PurchaseConfirm
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingList As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dlgPreview As PrintPreviewDialog
 End Class
