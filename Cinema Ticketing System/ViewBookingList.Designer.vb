@@ -41,6 +41,8 @@ Partial Class ViewBookingList
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHall = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgvBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,9 +157,10 @@ Partial Class ViewBookingList
         'mnuCinema
         '
         Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
+        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit})
         Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
         Me.mnuCinema.Name = "mnuCinema"
+        Me.mnuCinema.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
         Me.mnuCinema.Size = New System.Drawing.Size(772, 28)
         Me.mnuCinema.TabIndex = 15
         Me.mnuCinema.Text = "MenuStrip1"
@@ -180,6 +183,18 @@ Partial Class ViewBookingList
         Me.mnuBookingList.Name = "mnuBookingList"
         Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingList.Text = "Booking &List"
+        '
+        'mnuHall
+        '
+        Me.mnuHall.Name = "mnuHall"
+        Me.mnuHall.Size = New System.Drawing.Size(48, 24)
+        Me.mnuHall.Text = "H&all"
+        '
+        'mnuReport
+        '
+        Me.mnuReport.Name = "mnuReport"
+        Me.mnuReport.Size = New System.Drawing.Size(66, 24)
+        Me.mnuReport.Text = "R&eport"
         '
         'mnuExit
         '
@@ -225,15 +240,17 @@ Partial Class ViewBookingList
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents BookingBindingSource As BindingSource
     Friend WithEvents BookingTableAdapter As DatabaseDataSetTableAdapters.BookingTableAdapter
-    Friend WithEvents mnuCinema As MenuStrip
-    Friend WithEvents mnuBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents mnuCinema As MenuStrip
+    Friend WithEvents mnuBooking As ToolStripMenuItem
+    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
+    Friend WithEvents mnuBookingList As ToolStripMenuItem
+    Friend WithEvents mnuHall As ToolStripMenuItem
+    Friend WithEvents mnuReport As ToolStripMenuItem
+    Friend WithEvents mnuExit As ToolStripMenuItem
 End Class

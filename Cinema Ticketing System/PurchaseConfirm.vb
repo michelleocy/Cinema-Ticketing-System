@@ -20,6 +20,8 @@ Public Class PurchaseConfirm
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
 
+        page = 1
+
         Dim pageSize As New PaperSize("", 420, 540)
 
         dlgPreview.Document = doc
@@ -95,24 +97,10 @@ Public Class PurchaseConfirm
         page += 1
     End Sub
 
-    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs) Handles mnuBookingMakeBooking.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
 
         Me.Hide()
-        MakeBooking.ShowDialog()
+        Homescreen.ShowDialog()
 
     End Sub
-
-    Private Sub mnuBookingList_Click(sender As Object, e As EventArgs) Handles mnuBookingList.Click
-
-        Me.Hide()
-        ViewBookingList.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
-
-        End
-
-    End Sub
-
 End Class

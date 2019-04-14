@@ -44,7 +44,6 @@ C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing 
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PurchaseConfirm.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmManageHallSeat.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintBookingReceipt.resources
-C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbprojAssemblyReference.cache
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmAddHall.resources
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmHallLayoutEditor.resources
@@ -93,3 +92,4 @@ C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\De
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
+C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources

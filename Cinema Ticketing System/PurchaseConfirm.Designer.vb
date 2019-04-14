@@ -27,19 +27,14 @@ Partial Class PurchaseConfirm
         Me.lblPurchaseId = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
-        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
-        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
-        Me.mnuCinema.SuspendLayout()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(181, 206)
+        Me.btnPrint.Location = New System.Drawing.Point(135, 199)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 34)
         Me.btnPrint.TabIndex = 14
@@ -74,41 +69,6 @@ Partial Class PurchaseConfirm
         Me.lblInfo.Text = "Purchase completed !"
         Me.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'mnuCinema
-        '
-        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
-        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
-        Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Size = New System.Drawing.Size(435, 28)
-        Me.mnuCinema.TabIndex = 15
-        Me.mnuCinema.Text = "MenuStrip1"
-        '
-        'mnuBooking
-        '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
-        Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
-        Me.mnuBooking.Text = "&Booking"
-        '
-        'mnuBookingMakeBooking
-        '
-        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingMakeBooking.Text = "&Make Booking"
-        '
-        'mnuBookingList
-        '
-        Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingList.Text = "Booking &List"
-        '
-        'mnuExit
-        '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
-        Me.mnuExit.Text = "E&xit"
-        '
         'doc
         '
         Me.doc.OriginAtMargins = True
@@ -124,12 +84,21 @@ Partial Class PurchaseConfirm
         Me.dlgPreview.UseAntiAlias = True
         Me.dlgPreview.Visible = False
         '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(229, 199)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(75, 34)
+        Me.btnClose.TabIndex = 15
+        Me.btnClose.Text = "&Close"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
         'PurchaseConfirm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(435, 259)
-        Me.Controls.Add(Me.mnuCinema)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblPurchaseId)
         Me.Controls.Add(Me.lblTitle)
@@ -137,8 +106,6 @@ Partial Class PurchaseConfirm
         Me.Name = "PurchaseConfirm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PurchaseConfirm"
-        Me.mnuCinema.ResumeLayout(False)
-        Me.mnuCinema.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -147,11 +114,7 @@ Partial Class PurchaseConfirm
     Friend WithEvents lblPurchaseId As Label
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblInfo As Label
-    Friend WithEvents mnuCinema As MenuStrip
-    Friend WithEvents mnuBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
     Friend WithEvents doc As Printing.PrintDocument
     Friend WithEvents dlgPreview As PrintPreviewDialog
+    Friend WithEvents btnClose As Button
 End Class

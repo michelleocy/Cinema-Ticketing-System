@@ -188,12 +188,6 @@
     <Compile Include="PrintBookingReceipt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintMovieTicket.Designer.vb">
-      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PrintMovieTicket.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="PurchaseConfirm.Designer.vb">
       <DependentUpon>PurchaseConfirm.vb</DependentUpon>
     </Compile>
@@ -269,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrintBookingReceipt.resx">
       <DependentUpon>PrintBookingReceipt.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrintMovieTicket.resx">
-      <DependentUpon>PrintMovieTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseConfirm.resx">
       <DependentUpon>PurchaseConfirm.vb</DependentUpon>
