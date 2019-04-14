@@ -18,12 +18,6 @@
         dgvHallList.Columns(1).Width = 250
         dgvHallList.Columns(2).Width = 90
         dgvHallList.Columns(3).Width = 100
-
-        If dgvHallList.SelectedRows(0).Cells(3).Value.ToString = "D" Then
-            btnDeleteHall.Text = "Delete Hall"
-        Else
-            btnDeleteHall.Text = "Disable Hall"
-        End If
     End Sub
 
     Private Sub FrmViewHall_Load(sender As Object, e As EventArgs) Handles MyBase.Load

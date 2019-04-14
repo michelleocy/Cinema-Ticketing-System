@@ -10,22 +10,16 @@ Public Class PurchaseConfirm
     Public movieShowTime As String
     Public selectedSeat As String
     Private purchaseSeats As List(Of PurchasedSeat)
-    Private page As Integer = 1
+    Private page As Integer
 
     Private Sub PurchaseConfirm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         lblPurchaseId.Text = purchaseId.ToString()
-
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
         page = 1
 
         Dim pageSize As New PaperSize("", 420, 540)
-
-        dlgPreview.Document = doc
-        dlgPreview.ShowDialog(Me)
 
         doc.PrintController = New StandardPrintController()
         doc.DefaultPageSettings.Margins.Left = 0
@@ -33,6 +27,9 @@ Public Class PurchaseConfirm
         doc.DefaultPageSettings.Margins.Top = 0
         doc.DefaultPageSettings.Margins.Bottom = 0
         doc.DefaultPageSettings.PaperSize = pageSize
+
+        dlgPreview.Document = doc
+        dlgPreview.ShowDialog(Me)
         doc.Print()
 
     End Sub
@@ -97,10 +94,23 @@ Public Class PurchaseConfirm
         page += 1
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs) Handles mnuBookingMakeBooking.Click
 
         Me.Hide()
-        Homescreen.ShowDialog()
+        MakeBooking.ShowDialog()
+
+    End Sub
+
+    Private Sub mnuBookingList_Click(sender As Object, e As EventArgs) Handles mnuBookingList.Click
+
+        Me.Hide()
+        ViewBookingList.ShowDialog()
+
+    End Sub
+
+    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
+
+        End
 
     End Sub
 End Class

@@ -56,9 +56,10 @@ Public Class FrmGenerateReport
 
             For index = 1 To 40
                 Dim s As Seat = sortedDictionary.ToList(index - 1).Key
+                Dim seatcnt As Integer = sortedDictionary.ToList(index - 1).Value
                 cnt += 1
                 body.AppendFormat("{0,2}  {1,11}  {2,11}  {3,11}" & vbNewLine,
-                                  cnt, s.SeatNo, s.Hall.Number, sortedDictionary.ToList(index).Value)
+                                  cnt, s.SeatNo, s.Hall.Number, seatcnt)
             Next
 
             body.AppendLine()
@@ -79,6 +80,7 @@ Public Class FrmGenerateReport
 
     Private Sub FrmGenerateReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         bindData()
+        cboReportType.SelectedIndex = 0
     End Sub
 
     Private Sub bindData()
@@ -160,6 +162,7 @@ Public Class FrmGenerateReport
             Loop
         End If
         cboMonth.Enabled = True
+        cboMonth.SelectedIndex = 0
     End Sub
 
     Private Sub cboReportType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReportType.SelectedIndexChanged
