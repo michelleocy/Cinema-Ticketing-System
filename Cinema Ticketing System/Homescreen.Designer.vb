@@ -28,6 +28,7 @@ Partial Class Homescreen
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,13 +52,13 @@ Partial Class Homescreen
         'mnuBookingMakeBooking
         '
         Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(216, 26)
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingMakeBooking.Text = "&Make Booking"
         '
         'mnuBookingList
         '
         Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(216, 26)
+        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
         Me.mnuBookingList.Text = "Booking &List"
         '
         'mnuExit
@@ -77,11 +78,21 @@ Partial Class Homescreen
         Me.lblWelcome.Text = "Welcome !"
         Me.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblInfo
+        '
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Location = New System.Drawing.Point(55, 260)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(151, 17)
+        Me.lblInfo.TabIndex = 2
+        Me.lblInfo.Text = "Click to start purchase!"
+        '
         'Homescreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 314)
+        Me.Controls.Add(Me.lblInfo)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.mnuCinema)
         Me.MainMenuStrip = Me.mnuCinema
@@ -101,4 +112,5 @@ Partial Class Homescreen
     Friend WithEvents mnuBookingList As ToolStripMenuItem
     Friend WithEvents lblWelcome As Label
     Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents lblInfo As Label
 End Class

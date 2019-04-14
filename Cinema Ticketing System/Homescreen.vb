@@ -27,9 +27,9 @@
 
     End Sub
 
-    Private Sub mnuHall_Click(sender As Object, e As EventArgs) Handles mnuHall.Click
-        Me.Hide()
-        FrmViewHall.ShowDialog()
-        Me.Show()
-    End Sub
+    'Private Sub mnuHall_Click(sender As Object, e As EventArgs) Handles mnuHall.Click
+    '    Me.Hide()
+    '    FrmViewHall.ShowDialog()
+    '    Me.Show()
+    'End Sub
 End Class
