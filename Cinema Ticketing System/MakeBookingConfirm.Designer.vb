@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MakeBookingConfirm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,12 @@ Partial Class MakeBookingConfirm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
-        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.mnuCinema = New System.Windows.Forms.MenuStrip()
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,14 +62,14 @@ Partial Class MakeBookingConfirm
         Me.lblName.TabIndex = 7
         Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnPrint
+        'btnClose
         '
-        Me.btnPrint.Location = New System.Drawing.Point(179, 203)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(75, 34)
-        Me.btnPrint.TabIndex = 8
-        Me.btnPrint.Text = "&Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnClose.Location = New System.Drawing.Point(179, 203)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(75, 34)
+        Me.btnClose.TabIndex = 8
+        Me.btnClose.Text = "&Close"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'mnuCinema
         '
@@ -108,12 +108,12 @@ Partial Class MakeBookingConfirm
         '
         'MakeBookingConfirm
         '
-        Me.AcceptButton = Me.btnPrint
+        Me.AcceptButton = Me.btnClose
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(435, 259)
         Me.Controls.Add(Me.mnuCinema)
-        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.lblInfo)
@@ -129,7 +129,7 @@ Partial Class MakeBookingConfirm
     Friend WithEvents lblInfo As Label
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblName As Label
-    Friend WithEvents btnPrint As Button
+    Friend WithEvents btnClose As Button
     Friend WithEvents mnuCinema As MenuStrip
     Friend WithEvents mnuBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem

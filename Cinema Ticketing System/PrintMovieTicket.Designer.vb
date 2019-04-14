@@ -22,9 +22,38 @@ Partial Class PrintMovieTicket
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PrintMovieTicket))
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dialog = New System.Windows.Forms.PrintPreviewDialog()
+        Me.SuspendLayout()
+        '
+        'doc
+        '
+        Me.doc.OriginAtMargins = True
+        '
+        'dialog
+        '
+        Me.dialog.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dialog.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dialog.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dialog.Enabled = True
+        Me.dialog.Icon = CType(resources.GetObject("dialog.Icon"), System.Drawing.Icon)
+        Me.dialog.Name = "dialog"
+        Me.dialog.UseAntiAlias = True
+        Me.dialog.Visible = False
+        '
+        'PrintMovieTicket
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "PrintMovieTicket"
+        Me.Name = "PrintMovieTicket"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Movie Ticket"
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dialog As PrintPreviewDialog
 End Class

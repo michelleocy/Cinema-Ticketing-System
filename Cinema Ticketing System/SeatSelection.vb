@@ -77,7 +77,7 @@
         purchase.PurchasedSeats.AddRange(purchasedSeat)
         purchase.MovieScheduleID = movieScheduleId
         PurchaseSummary.purchase = purchase
-        Me.Close()
+        Me.Hide()
         PurchaseSummary.ShowDialog()
 
     End Sub

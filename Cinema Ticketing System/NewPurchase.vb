@@ -6,15 +6,25 @@
         Dim rs = From o In db.MovieSchedules
                  Where o.Date = dtpDateAvailable.Value
 
+        PurchaseConfirm.movieShowDate = dtpDateAvailable.Value.ToShortDateString
+
         Me.cboMovie.DisplayMember = "Value"
         Me.cboMovie.ValueMember = "Key"
 
         If rs.Count > 0 Then
             For Each item In rs
-                cboMovie.Items.Add(New DictionaryEntry(item.MovieID, item.Movie.MovieName))
+                Dim existed As Boolean = False
+                For Each i In cboMovie.Items
+                    If i.value.ToString = item.Movie.MovieName Then
+                        existed = True
+                        Exit For
+                    End If
+                Next
+                If existed = False Then
+                    cboMovie.Items.Add(New DictionaryEntry(item.MovieID, item.Movie.MovieName))
+                End If
             Next
         End If
-
     End Sub
 
     Private Sub cboMovie_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMovie.SelectedIndexChanged
@@ -24,7 +34,7 @@
                  Where o.MovieID = Integer.Parse(CType(cboMovie.SelectedItem, DictionaryEntry).Key)
 
         PurchaseSummary.movieName = cboMovie.Text
-
+        PurchaseConfirm.movieTitle = cboMovie.Text
 
         Me.cboTime.DisplayMember = "Value"
         Me.cboTime.ValueMember = "Key"
@@ -64,6 +74,8 @@
         Dim db As New demoDataContext
         Dim rs1 = From o In db.Purchases
                   Where o.MovieScheduleID = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+
+        PurchaseConfirm.movieShowTime = cboTime.Text
 
         Dim seatAmount As Integer
         Dim count As Integer = 0

@@ -34,7 +34,6 @@ C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing 
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\bin\Debug\stdole.dll
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
-C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintBookingReceipt.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.SeatSelection.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmAddHall.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmHallLayoutEditor.resources
@@ -43,4 +42,54 @@ C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing 
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.NewPurchase.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PurchaseSummary.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PurchaseConfirm.resources
+C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmManageHallSeat.resources
+C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintBookingReceipt.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbprojAssemblyReference.cache
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmAddHall.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmHallLayoutEditor.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmManageHallSeat.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmUpdateHall.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmViewHall.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.Homescreen.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.MakeBooking.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.NewPurchase.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintBookingReceipt.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PurchaseConfirm.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PurchaseSummary.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.SeatSelection.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.SplashScreen.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.ViewBookingList.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.MakeBookingConfirm.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.Resources.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.GenerateResource.cache
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CoreCompileInputs.cache
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.exe
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.xml
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.pdb
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.exe.config
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.exe
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.pdb
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.xml
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\FlashControlV71.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\stdole.dll
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
