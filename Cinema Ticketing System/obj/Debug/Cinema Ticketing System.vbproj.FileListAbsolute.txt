@@ -67,8 +67,6 @@ C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\De
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.exe
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.xml
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.pdb
-C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Database.mdf
-C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Database_log.ldf
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.exe.config
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.exe
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Cinema Ticketing System.pdb
@@ -94,3 +92,4 @@ C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\De
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\stdole.dll
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources
+C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
