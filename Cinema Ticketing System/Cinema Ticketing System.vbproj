@@ -113,6 +113,12 @@
     <Compile Include="FrmAddHall.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmGenerateReport.Designer.vb">
+      <DependentUpon>FrmGenerateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenerateReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmHallLayoutEditor.Designer.vb">
       <DependentUpon>FrmHallLayoutEditor.vb</DependentUpon>
     </Compile>
@@ -236,6 +242,9 @@
     </None>
     <EmbeddedResource Include="FrmAddHall.resx">
       <DependentUpon>FrmAddHall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerateReport.resx">
+      <DependentUpon>FrmGenerateReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHallLayoutEditor.resx">
       <DependentUpon>FrmHallLayoutEditor.vb</DependentUpon>

@@ -12,6 +12,9 @@
                 If seat.Status = "A" Then
                     btn.BackColor = Color.LightGreen
                     btn.ForeColor = Color.Black
+                ElseIf seat.Status = "R" Then
+                    btn.BackColor = Color.Blue
+                    btn.ForeColor = Color.Black
                 Else
                     btn.BackColor = Color.Gray
                     btn.ForeColor = Color.White
@@ -22,12 +25,12 @@
 
     Private Sub button_Click(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
-        If btn.BackColor = Color.LightGreen Then
-            btn.ForeColor = Color.White
-            btn.BackColor = Color.Gray
-        Else
+        If btn.BackColor = Color.Gray Then
             btn.ForeColor = Color.Black
             btn.BackColor = Color.LightGreen
+        Else
+            btn.ForeColor = Color.White
+            btn.BackColor = Color.Gray
         End If
         isLayoutEdited = True
     End Sub

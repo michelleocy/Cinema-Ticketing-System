@@ -32,4 +32,10 @@
         FrmViewHall.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub mnuReport_Click(sender As Object, e As EventArgs) Handles mnuReport.Click
+        Me.Hide()
+        FrmGenerateReport.ShowDialog()
+        Me.Show()
+    End Sub
 End Class

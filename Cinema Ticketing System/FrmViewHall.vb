@@ -74,13 +74,44 @@
 
     Private Sub btnDeleteHall_Click(sender As Object, e As EventArgs) Handles btnDeleteHall.Click
         Dim db As New demoDataContext
-        Dim hall = (From h In db.Halls
-                    Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)).FirstOrDefault
-        If btnDeleteHall.Text = "Disable Hall" Then
-            hall.Status = "D"
+
+        If btnDeleteHall.Text = "Enable Hall" Then
+            Dim result As Integer = MessageBox.Show("Are you sure you want to enable the hall?",
+                                        "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
+            If result = DialogResult.Yes Then
+                Dim hall = (From h In db.Halls
+                            Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)).FirstOrDefault
+                hall.Status = "A"
+            Else
+                Return
+            End If
         Else
-            db.Seats.DeleteAllOnSubmit(hall.Seats)
-            db.Halls.DeleteOnSubmit(hall)
+            Dim rs = From h In db.MovieSchedules
+                     Where h.HallId = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)
+
+            If rs.Count > 0 Then
+                Dim result As Integer = MessageBox.Show("The hall was used, to prevent data loss the hall cannot be deleted." + vbNewLine + "Do you want to disable the hall instead?",
+                                        "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
+                If result = DialogResult.Yes Then
+                    Dim hall = (From h In db.Halls
+                                Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)).FirstOrDefault
+                    hall.Status = "D"
+                Else
+                    Return
+                End If
+            Else
+                Dim result As Integer = MessageBox.Show("Are you sure you want to delete the hall?",
+                                        "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
+                If result = DialogResult.Yes Then
+                    Dim hall = (From h In db.Halls
+                                Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)).FirstOrDefault
+                    db.Seats.DeleteAllOnSubmit(hall.Seats)
+                    db.Halls.DeleteOnSubmit(hall)
+                Else
+                    Return
+                End If
+            End If
+
         End If
         db.SubmitChanges()
         BindData()
@@ -88,9 +119,10 @@
 
     Private Sub dgvHallList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvHallList.CellClick
         If dgvHallList.SelectedRows(0).Cells(3).Value.ToString = "D" Then
-            btnDeleteHall.Text = "Delete Hall"
+            btnDeleteHall.Text = "Enable Hall"
+            btnDeleteHall.BackColor = Color.CadetBlue
         Else
-            btnDeleteHall.Text = "Disable Hall"
+            btnDeleteHall.Text = "Delete Hall"
         End If
     End Sub
 End Class

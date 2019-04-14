@@ -49,6 +49,8 @@
     End Sub
 
     Private Sub btnManageSeat_Click(sender As Object, e As EventArgs) Handles btnManageSeat.Click
-
+        FrmManageHallSeat.seatsTemp = seats
+        FrmManageHallSeat.ShowDialog()
+        seats = FrmManageHallSeat.seatsTemp
     End Sub
 End Class
