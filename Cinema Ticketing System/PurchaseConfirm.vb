@@ -10,20 +10,16 @@ Public Class PurchaseConfirm
     Public movieShowTime As String
     Public selectedSeat As String
     Private purchaseSeats As List(Of PurchasedSeat)
-    Private page As Integer = 1
+    Private page As Integer
 
     Private Sub PurchaseConfirm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         lblPurchaseId.Text = purchaseId.ToString()
-
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        page = 1
 
         Dim pageSize As New PaperSize("", 420, 540)
-
-        dlgPreview.Document = doc
-        dlgPreview.ShowDialog(Me)
 
         doc.PrintController = New StandardPrintController()
         doc.DefaultPageSettings.Margins.Left = 0
@@ -31,6 +27,9 @@ Public Class PurchaseConfirm
         doc.DefaultPageSettings.Margins.Top = 0
         doc.DefaultPageSettings.Margins.Bottom = 0
         doc.DefaultPageSettings.PaperSize = pageSize
+
+        dlgPreview.Document = doc
+        dlgPreview.ShowDialog(Me)
         doc.Print()
 
     End Sub
@@ -114,5 +113,4 @@ Public Class PurchaseConfirm
         End
 
     End Sub
-
 End Class
