@@ -26,12 +26,6 @@ Partial Class MakeBookingConfirm
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
-        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblInfo
@@ -71,48 +65,12 @@ Partial Class MakeBookingConfirm
         Me.btnClose.Text = "&Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'mnuCinema
-        '
-        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
-        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
-        Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Size = New System.Drawing.Size(435, 28)
-        Me.mnuCinema.TabIndex = 9
-        Me.mnuCinema.Text = "MenuStrip1"
-        '
-        'mnuBooking
-        '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
-        Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
-        Me.mnuBooking.Text = "&Booking"
-        '
-        'mnuBookingMakeBooking
-        '
-        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingMakeBooking.Text = "&Make Booking"
-        '
-        'mnuBookingList
-        '
-        Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingList.Text = "Booking &List"
-        '
-        'mnuExit
-        '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
-        Me.mnuExit.Text = "E&xit"
-        '
         'MakeBookingConfirm
         '
         Me.AcceptButton = Me.btnClose
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(435, 259)
-        Me.Controls.Add(Me.mnuCinema)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblTitle)
@@ -120,8 +78,6 @@ Partial Class MakeBookingConfirm
         Me.Name = "MakeBookingConfirm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Booking Confirm"
-        Me.mnuCinema.ResumeLayout(False)
-        Me.mnuCinema.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -130,9 +86,4 @@ Partial Class MakeBookingConfirm
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblName As Label
     Friend WithEvents btnClose As Button
-    Friend WithEvents mnuCinema As MenuStrip
-    Friend WithEvents mnuBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
 End Class

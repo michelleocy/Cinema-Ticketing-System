@@ -1,4 +1,6 @@
-﻿Public Class NewPurchase
+﻿Imports System.Text
+
+Public Class NewPurchase
 
     Private Sub dtpDateAvailable_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateAvailable.ValueChanged
 
@@ -59,16 +61,6 @@
 
     End Sub
 
-    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-
-        SeatSelection.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
-        PurchaseSummary.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
-        SeatSelection.amountSeatRequired = Integer.Parse(nudAmount.Text)
-        Me.Hide()
-        SeatSelection.ShowDialog()
-
-    End Sub
-
     Private Sub cboTime_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTime.SelectedIndexChanged
 
         Dim db As New demoDataContext
@@ -103,23 +95,30 @@
 
     End Sub
 
-    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs) Handles mnuBookingMakeBooking.Click
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
-        Me.Hide()
-        MakeBooking.ShowDialog()
+        Dim err As New StringBuilder()
+        Dim ctr As Control = Nothing
 
-    End Sub
+        If cboMovie.SelectedIndex = -1 Then
+            err.AppendLine("- Movie Name is required !")
+            ctr = If(ctr, cboMovie)
+        End If
 
-    Private Sub mnuBookingList_Click(sender As Object, e As EventArgs) Handles mnuBookingList.Click
+        If nudAmount.Text = 0 Then
+            err.AppendLine("- Amount is required !")
+            ctr = If(ctr, nudAmount)
+        End If
 
-        Me.Hide()
-        ViewBookingList.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
-
-        End
+        If err.Length > 0 Then
+            MessageBox.Show(err.ToString(), "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Else
+            SeatSelection.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+            PurchaseSummary.movieScheduleId = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+            SeatSelection.amountSeatRequired = Integer.Parse(nudAmount.Text)
+            Me.Hide()
+            SeatSelection.ShowDialog()
+        End If
 
     End Sub
 

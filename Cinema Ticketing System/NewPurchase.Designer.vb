@@ -31,13 +31,7 @@ Partial Class NewPurchase
         Me.btnNext = New System.Windows.Forms.Button()
         Me.lblAmount = New System.Windows.Forms.Label()
         Me.nudAmount = New System.Windows.Forms.NumericUpDown()
-        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
-        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.nudAmount, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblDate
@@ -116,47 +110,11 @@ Partial Class NewPurchase
         Me.nudAmount.Size = New System.Drawing.Size(121, 22)
         Me.nudAmount.TabIndex = 19
         '
-        'mnuCinema
-        '
-        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
-        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
-        Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Size = New System.Drawing.Size(482, 28)
-        Me.mnuCinema.TabIndex = 20
-        Me.mnuCinema.Text = "MenuStrip1"
-        '
-        'mnuBooking
-        '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
-        Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
-        Me.mnuBooking.Text = "&Booking"
-        '
-        'mnuBookingMakeBooking
-        '
-        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingMakeBooking.Text = "&Make Booking"
-        '
-        'mnuBookingList
-        '
-        Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingList.Text = "Booking &List"
-        '
-        'mnuExit
-        '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
-        Me.mnuExit.Text = "E&xit"
-        '
         'NewPurchase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 292)
-        Me.Controls.Add(Me.mnuCinema)
         Me.Controls.Add(Me.nudAmount)
         Me.Controls.Add(Me.lblAmount)
         Me.Controls.Add(Me.btnNext)
@@ -170,8 +128,6 @@ Partial Class NewPurchase
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "New Purchase"
         CType(Me.nudAmount, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.mnuCinema.ResumeLayout(False)
-        Me.mnuCinema.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -186,9 +142,4 @@ Partial Class NewPurchase
     Friend WithEvents btnNext As Button
     Friend WithEvents lblAmount As Label
     Friend WithEvents nudAmount As NumericUpDown
-    Friend WithEvents mnuCinema As MenuStrip
-    Friend WithEvents mnuBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
-    Friend WithEvents mnuBookingList As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
 End Class
