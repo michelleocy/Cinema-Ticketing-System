@@ -23,7 +23,7 @@ Partial Class FrmGenerateReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGenerateReport))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboReportType = New System.Windows.Forms.ComboBox()
         Me.cboMonth = New System.Windows.Forms.ComboBox()
         Me.btnGenerate = New System.Windows.Forms.Button()
         Me.doc = New System.Drawing.Printing.PrintDocument()
@@ -34,15 +34,15 @@ Partial Class FrmGenerateReport
         Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cboReportType
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Seat Report"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 25)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cboReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboReportType.FormattingEnabled = True
+        Me.cboReportType.Items.AddRange(New Object() {"Seat Report"})
+        Me.cboReportType.Location = New System.Drawing.Point(12, 25)
+        Me.cboReportType.Name = "cboReportType"
+        Me.cboReportType.Size = New System.Drawing.Size(121, 21)
+        Me.cboReportType.TabIndex = 0
         '
         'cboMonth
         '
@@ -124,7 +124,7 @@ Partial Class FrmGenerateReport
         Me.Controls.Add(Me.cboYear)
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.cboMonth)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboReportType)
         Me.Name = "FrmGenerateReport"
         Me.Text = "Report"
         Me.ResumeLayout(False)
@@ -132,7 +132,7 @@ Partial Class FrmGenerateReport
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboReportType As ComboBox
     Friend WithEvents cboMonth As ComboBox
     Friend WithEvents btnGenerate As Button
     Friend WithEvents doc As Printing.PrintDocument

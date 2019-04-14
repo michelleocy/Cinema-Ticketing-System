@@ -15,60 +15,61 @@ Public Class FrmGenerateReport
 
 
     Private Sub doc_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles doc.PrintPage
-
-        Dim header As String = "Number Of Times A Seat Has Booked On" + vbNewLine +
+        If cboReportType.Text = "Seat Report" Then
+            Dim header As String = "Number Of Times A Seat Has Booked On" + vbNewLine +
             cboMonth.Text + " " + cboYear.Text + " (Top 40)"
-        Dim body As New StringBuilder()
-        Dim db As New demoDataContext
+            Dim body As New StringBuilder()
+            Dim db As New demoDataContext
 
-        body.AppendLine("No  Seat Number  Hall Number  Book Amount")
-        body.AppendLine("--  -----------  -----------  -----------")
+            body.AppendLine("No  Seat Number  Hall Number  Book Amount")
+            body.AppendLine("--  -----------  -----------  -----------")
 
-        Dim dateStart As Date = Date.Parse("01 " + cboMonth.Text + " " + cboYear.Text)
-        Dim dateEnd As Date = dateStart.AddMonths(1)
+            Dim dateStart As Date = Date.Parse("01 " + cboMonth.Text + " " + cboYear.Text)
+            Dim dateEnd As Date = dateStart.AddMonths(1)
 
-        Dim rs = From i In db.Seats
+            Dim rs = From i In db.Seats
 
-        Dim dictionary As New Dictionary(Of Seat, Integer)
+            Dim dictionary As New Dictionary(Of Seat, Integer)
 
-        For Each s In rs
-            Dim seatcnt As Integer = 0
-            For Each m In s.Hall.MovieSchedules
-                If m.Date.CompareTo(dateStart) >= 0 And m.Date.CompareTo(dateEnd) < 0 Then
-                    For Each p In m.Purchases
-                        For Each ps In p.PurchasedSeats
-                            If ps.SeatNum = s.SeatNo AndAlso s.HallId = m.HallId Then
-                                seatcnt += 1
-                            End If
+            For Each s In rs
+                Dim seatcnt As Integer = 0
+                For Each m In s.Hall.MovieSchedules
+                    If m.Date.CompareTo(dateStart) >= 0 And m.Date.CompareTo(dateEnd) < 0 Then
+                        For Each p In m.Purchases
+                            For Each ps In p.PurchasedSeats
+                                If ps.SeatNum = s.SeatNo AndAlso s.HallId = m.HallId Then
+                                    seatcnt += 1
+                                End If
+                            Next
                         Next
-                    Next
-                End If
+                    End If
+                Next
+                Dim pair As New DictionaryEntry
+                dictionary.Add(s, seatcnt)
             Next
-            Dim pair As New DictionaryEntry
-            dictionary.Add(s, seatcnt)
-        Next
 
-        Dim sorted = From p In dictionary
-                     Order By p.Value Descending
+            Dim sorted = From p In dictionary
+                         Order By p.Value Descending
 
-        Dim sortedDictionary = sorted.ToDictionary(Function(p) p.Key, Function(p) p.Value)
-        Dim cnt As Integer = 0
+            Dim sortedDictionary = sorted.ToDictionary(Function(p) p.Key, Function(p) p.Value)
+            Dim cnt As Integer = 0
 
-        For index = 1 To 40
-            Dim s As Seat = sortedDictionary.ToList(index - 1).Key
-            cnt += 1
-            body.AppendFormat("{0,2}  {1,11}  {2,11}  {3,11}" & vbNewLine,
-                              cnt, s.SeatNo, s.Hall.Number, sortedDictionary.ToList(index).Value)
-        Next
+            For index = 1 To 40
+                Dim s As Seat = sortedDictionary.ToList(index - 1).Key
+                cnt += 1
+                body.AppendFormat("{0,2}  {1,11}  {2,11}  {3,11}" & vbNewLine,
+                                  cnt, s.SeatNo, s.Hall.Number, sortedDictionary.ToList(index).Value)
+            Next
 
-        body.AppendLine()
-        body.AppendFormat("{0,2} record(s)", cnt)
+            body.AppendLine()
+            body.AppendFormat("{0,2} record(s)", cnt)
 
-        With e.Graphics
-            .DrawString(header, fontHeader, Brushes.Purple, 0, 0)
-            .DrawString(subHeader, fontSubHeader, Brushes.Black, 0, 80)
-            .DrawString(body.ToString, fontbody, Brushes.Black, 0, 160)
-        End With
+            With e.Graphics
+                .DrawString(header, fontHeader, Brushes.Purple, 0, 0)
+                .DrawString(subHeader, fontSubHeader, Brushes.Black, 0, 80)
+                .DrawString(body.ToString, fontbody, Brushes.Black, 0, 160)
+            End With
+        End If
     End Sub
 
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
@@ -159,5 +160,9 @@ Public Class FrmGenerateReport
             Loop
         End If
         cboMonth.Enabled = True
+    End Sub
+
+    Private Sub cboReportType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReportType.SelectedIndexChanged
+
     End Sub
 End Class
