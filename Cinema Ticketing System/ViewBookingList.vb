@@ -61,12 +61,9 @@
         End If
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
 
-        Dim customerName As String = dgvBooking.CurrentRow.Cells(1).Value.ToString
-        PrintBookingReceipt.selectedBooking = customerName
-
-        Me.Close()
+        Me.Hide()
         PrintBookingReceipt.ShowDialog()
 
     End Sub
@@ -145,12 +142,6 @@
 
         Me.Hide()
         MakeBooking.ShowDialog()
-
-    End Sub
-
-    Private Sub mnuBookingList_Click(sender As Object, e As EventArgs) Handles mnuBookingList.Click
-
-        Me.ShowDialog()
 
     End Sub
 

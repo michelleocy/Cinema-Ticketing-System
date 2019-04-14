@@ -6,6 +6,8 @@
         Dim rs = From o In db.MovieSchedules
                  Where o.Date = dtpDateAvailable.Value
 
+        PurchaseConfirm.movieShowDate = dtpDateAvailable.Value.ToShortDateString
+
         Me.cboMovie.DisplayMember = "Value"
         Me.cboMovie.ValueMember = "Key"
 
@@ -24,7 +26,7 @@
                  Where o.MovieID = Integer.Parse(CType(cboMovie.SelectedItem, DictionaryEntry).Key)
 
         PurchaseSummary.movieName = cboMovie.Text
-
+        PurchaseConfirm.movieTitle = cboMovie.Text
 
         Me.cboTime.DisplayMember = "Value"
         Me.cboTime.ValueMember = "Key"
@@ -64,6 +66,8 @@
         Dim db As New demoDataContext
         Dim rs1 = From o In db.Purchases
                   Where o.MovieScheduleID = Integer.Parse(CType(cboTime.SelectedItem, DictionaryEntry).Key)
+
+        PurchaseConfirm.movieShowTime = cboTime.Text
 
         Dim seatAmount As Integer
         Dim count As Integer = 0

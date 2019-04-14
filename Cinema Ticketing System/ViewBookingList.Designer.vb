@@ -24,24 +24,24 @@ Partial Class ViewBookingList
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.dgvBooking = New System.Windows.Forms.DataGridView()
-        Me.BookingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New Cinema_Ticketing_System.DatabaseDataSet()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnPrint = New System.Windows.Forms.Button()
-        Me.BookingTableAdapter = New Cinema_Ticketing_System.DatabaseDataSetTableAdapters.BookingTableAdapter()
-        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
-        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BookingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New Cinema_Ticketing_System.DatabaseDataSet()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.BookingTableAdapter = New Cinema_Ticketing_System.DatabaseDataSetTableAdapters.BookingTableAdapter()
+        Me.mnuCinema = New System.Windows.Forms.MenuStrip()
+        Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgvBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,88 +62,6 @@ Partial Class ViewBookingList
         Me.dgvBooking.RowTemplate.Height = 24
         Me.dgvBooking.Size = New System.Drawing.Size(748, 217)
         Me.dgvBooking.TabIndex = 0
-        '
-        'BookingBindingSource
-        '
-        Me.BookingBindingSource.DataMember = "Booking"
-        Me.BookingBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(12, 44)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(57, 17)
-        Me.lblName.TabIndex = 1
-        Me.lblName.Text = "Name : "
-        '
-        'txtName
-        '
-        Me.txtName.Location = New System.Drawing.Point(76, 41)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(163, 22)
-        Me.txtName.TabIndex = 2
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(379, 31)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(104, 42)
-        Me.btnDelete.TabIndex = 10
-        Me.btnDelete.Text = "&Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnPrint
-        '
-        Me.btnPrint.Location = New System.Drawing.Point(259, 31)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(104, 42)
-        Me.btnPrint.TabIndex = 14
-        Me.btnPrint.Text = "&Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
-        '
-        'BookingTableAdapter
-        '
-        Me.BookingTableAdapter.ClearBeforeFill = True
-        '
-        'mnuCinema
-        '
-        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
-        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
-        Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Size = New System.Drawing.Size(772, 28)
-        Me.mnuCinema.TabIndex = 15
-        Me.mnuCinema.Text = "MenuStrip1"
-        '
-        'mnuBooking
-        '
-        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
-        Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
-        Me.mnuBooking.Text = "&Booking"
-        '
-        'mnuBookingMakeBooking
-        '
-        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingMakeBooking.Text = "&Make Booking"
-        '
-        'mnuBookingList
-        '
-        Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
-        Me.mnuBookingList.Text = "Booking &List"
-        '
-        'mnuExit
-        '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
-        Me.mnuExit.Text = "E&xit"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -186,13 +104,96 @@ Partial Class ViewBookingList
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
+        'BookingBindingSource
+        '
+        Me.BookingBindingSource.DataMember = "Booking"
+        Me.BookingBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(12, 44)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(57, 17)
+        Me.lblName.TabIndex = 1
+        Me.lblName.Text = "Name : "
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(76, 41)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(163, 22)
+        Me.txtName.TabIndex = 2
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(379, 31)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(104, 42)
+        Me.btnDelete.TabIndex = 10
+        Me.btnDelete.Text = "&Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnPreview
+        '
+        Me.btnPreview.Location = New System.Drawing.Point(259, 31)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(104, 42)
+        Me.btnPreview.TabIndex = 14
+        Me.btnPreview.Text = "&Preview"
+        Me.btnPreview.UseVisualStyleBackColor = True
+        '
+        'BookingTableAdapter
+        '
+        Me.BookingTableAdapter.ClearBeforeFill = True
+        '
+        'mnuCinema
+        '
+        Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuExit})
+        Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
+        Me.mnuCinema.Name = "mnuCinema"
+        Me.mnuCinema.Size = New System.Drawing.Size(772, 28)
+        Me.mnuCinema.TabIndex = 15
+        Me.mnuCinema.Text = "MenuStrip1"
+        '
+        'mnuBooking
+        '
+        Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
+        Me.mnuBooking.Name = "mnuBooking"
+        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
+        Me.mnuBooking.Text = "&Booking"
+        '
+        'mnuBookingMakeBooking
+        '
+        Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
+        Me.mnuBookingMakeBooking.Text = "&Make Booking"
+        '
+        'mnuBookingList
+        '
+        Me.mnuBookingList.Name = "mnuBookingList"
+        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
+        Me.mnuBookingList.Text = "Booking &List"
+        '
+        'mnuExit
+        '
+        Me.mnuExit.Name = "mnuExit"
+        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
+        Me.mnuExit.Text = "E&xit"
+        '
         'ViewBookingList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 327)
         Me.Controls.Add(Me.mnuCinema)
-        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblName)
@@ -220,7 +221,7 @@ Partial Class ViewBookingList
     Friend WithEvents lblName As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnPrint As Button
+    Friend WithEvents btnPreview As Button
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents BookingBindingSource As BindingSource
     Friend WithEvents BookingTableAdapter As DatabaseDataSetTableAdapters.BookingTableAdapter
