@@ -98,7 +98,7 @@
                                         "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
                 If result = DialogResult.Yes Then
                     Dim hall = (From h In db.Halls
-                                Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value.ToString)).FirstOrDefault
+                                Where h.Id = Integer.Parse(dgvHallList.SelectedRows(0).Cells(0).Value)).FirstOrDefault
                     db.Seats.DeleteAllOnSubmit(hall.Seats)
                     db.Halls.DeleteOnSubmit(hall)
                 Else

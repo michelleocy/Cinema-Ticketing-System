@@ -58,14 +58,17 @@
             cboNumber.Items.Add(index)
         Next
         Dim halls = From c In db.Halls
-        For Each hall In halls
-            cboNumber.Items.Remove(hall.Number)
-        Next
+
+        If halls.Count > 0 Then
+            For Each hall In halls
+                cboNumber.Items.Remove(hall.Number)
+            Next
+        End If
         cboNumber.SelectedIndex = 0
     End Sub
 
     Private Sub btnEditLayout_Click(sender As Object, e As EventArgs) Handles btnEditLayout.Click
-        FrmHallLayoutEditor.seatsTemp = seats
+        FrmHallLayoutEditor.seatsOri = seats
         FrmHallLayoutEditor.ShowDialog()
         seats = FrmHallLayoutEditor.seatsTemp
         isLayoutEdited = True

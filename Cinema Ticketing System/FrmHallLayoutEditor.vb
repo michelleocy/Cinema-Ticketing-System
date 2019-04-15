@@ -1,9 +1,15 @@
 ﻿Public Class FrmHallLayoutEditor
     Public seatsTemp As New List(Of Seat)
+    Public seatsOri As New List(Of Seat)
     Private isLayoutEdited As Boolean
 
     Private Sub FrmHallLayoutEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        seatsTemp = seatsOri
         isLayoutEdited = False
+        bindSeats()
+    End Sub
+
+    Private Sub bindSeats()
         For Each ctrl In grpSeat.Controls
             If ctrl.GetType = GetType(Button) Then
                 Dim btn As Button = CType(ctrl, Button)
@@ -56,15 +62,10 @@
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
-        Dim result As Integer = MessageBox.Show("Are you sure you want to set all the seats to available?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
+        Dim result As Integer = MessageBox.Show("Are you sure you want to reset the seats?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.None)
         If result = DialogResult.Yes Then
-            For Each ctrl In grpSeat.Controls
-                If ctrl.GetType = GetType(Button) Then
-                    Dim btn As Button = CType(ctrl, Button)
-                    btn.BackColor = Color.LightGreen
-                    btn.ForeColor = Color.Black
-                End If
-            Next
+            seatsOri = seatsTemp
+            bindSeats()
         End If
     End Sub
 

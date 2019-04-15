@@ -36,33 +36,30 @@ Partial Class FrmViewHall
         Me.dgvHallList.AllowUserToDeleteRows = False
         Me.dgvHallList.AllowUserToOrderColumns = True
         Me.dgvHallList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHallList.Location = New System.Drawing.Point(16, 39)
-        Me.dgvHallList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvHallList.Location = New System.Drawing.Point(12, 32)
         Me.dgvHallList.MultiSelect = False
         Me.dgvHallList.Name = "dgvHallList"
         Me.dgvHallList.ReadOnly = True
         Me.dgvHallList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHallList.Size = New System.Drawing.Size(645, 612)
+        Me.dgvHallList.Size = New System.Drawing.Size(484, 497)
         Me.dgvHallList.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(16, 11)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 25)
+        Me.Label1.Size = New System.Drawing.Size(73, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Hall List :"
         '
         'btnAddHall
         '
         Me.btnAddHall.BackColor = System.Drawing.Color.Green
-        Me.btnAddHall.Location = New System.Drawing.Point(16, 658)
-        Me.btnAddHall.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAddHall.Location = New System.Drawing.Point(12, 535)
         Me.btnAddHall.Name = "btnAddHall"
-        Me.btnAddHall.Size = New System.Drawing.Size(100, 28)
+        Me.btnAddHall.Size = New System.Drawing.Size(75, 23)
         Me.btnAddHall.TabIndex = 2
         Me.btnAddHall.Text = "Add Hall"
         Me.btnAddHall.UseVisualStyleBackColor = False
@@ -70,35 +67,32 @@ Partial Class FrmViewHall
         'btnDeleteHall
         '
         Me.btnDeleteHall.BackColor = System.Drawing.Color.Red
-        Me.btnDeleteHall.Location = New System.Drawing.Point(561, 658)
-        Me.btnDeleteHall.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDeleteHall.Location = New System.Drawing.Point(421, 535)
         Me.btnDeleteHall.Name = "btnDeleteHall"
-        Me.btnDeleteHall.Size = New System.Drawing.Size(100, 28)
+        Me.btnDeleteHall.Size = New System.Drawing.Size(75, 23)
         Me.btnDeleteHall.TabIndex = 2
         Me.btnDeleteHall.Text = "Delete Hall"
         Me.btnDeleteHall.UseVisualStyleBackColor = False
         '
         'btnEditHall
         '
-        Me.btnEditHall.Location = New System.Drawing.Point(453, 658)
-        Me.btnEditHall.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditHall.Location = New System.Drawing.Point(340, 535)
         Me.btnEditHall.Name = "btnEditHall"
-        Me.btnEditHall.Size = New System.Drawing.Size(100, 28)
+        Me.btnEditHall.Size = New System.Drawing.Size(75, 23)
         Me.btnEditHall.TabIndex = 2
         Me.btnEditHall.Text = "Edit Hall"
         Me.btnEditHall.UseVisualStyleBackColor = True
         '
         'FrmViewHall
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(677, 699)
+        Me.ClientSize = New System.Drawing.Size(508, 568)
         Me.Controls.Add(Me.btnEditHall)
         Me.Controls.Add(Me.btnDeleteHall)
         Me.Controls.Add(Me.btnAddHall)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvHallList)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmViewHall"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmViewHall"

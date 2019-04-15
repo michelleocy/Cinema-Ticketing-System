@@ -91,5 +91,4 @@ C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\De
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\stdole.dll
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
 C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources
-C:\Users\Saw\Source\Repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.PrintMovieTicket.resources
 C:\Users\Michelle Ooi\Documents\Degree Y2S3\Visual Studio 2017\Cinema Ticketing System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmGenerateReport.resources

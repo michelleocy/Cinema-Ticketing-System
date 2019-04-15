@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub btnEditLayout_Click(sender As Object, e As EventArgs) Handles btnEditLayout.Click
-        FrmHallLayoutEditor.seatsTemp = seats
+        FrmHallLayoutEditor.seatsOri = seats
         FrmHallLayoutEditor.ShowDialog()
         seats = FrmHallLayoutEditor.seatsTemp
     End Sub
@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub btnManageSeat_Click(sender As Object, e As EventArgs) Handles btnManageSeat.Click
-        FrmManageHallSeat.seatsTemp = seats
+        FrmManageHallSeat.seatsOri = seats
         FrmManageHallSeat.ShowDialog()
         seats = FrmManageHallSeat.seatsTemp
     End Sub
