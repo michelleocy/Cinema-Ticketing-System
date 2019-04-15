@@ -27,6 +27,31 @@ Cinema Ticketing System
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Cinema_Ticketing_System.My.Resources.Resources.IMG_20190415_WA0001">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Cinema_Ticketing_System.My.Resources.Resources.IMG_20190415_WA0002">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Cinema_Ticketing_System.My.Resources.Resources.IMG_20190415_WA0003">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Cinema_Ticketing_System.My.Resources.Resources.IMG_20190415_WA0004">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Cinema_Ticketing_System.My.Resources.Resources.IMG_20190415_WA0005">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Cinema_Ticketing_System.My.Resources.Resources.logo_mt_cl_transparent">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

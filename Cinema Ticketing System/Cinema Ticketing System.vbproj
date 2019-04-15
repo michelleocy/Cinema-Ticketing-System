@@ -330,6 +330,11 @@
     <Content Include="Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\IMG-20190415-WA0003.jpg" />
+    <None Include="Resources\IMG-20190415-WA0002.jpg" />
+    <None Include="Resources\IMG-20190415-WA0001.jpg" />
+    <None Include="Resources\IMG-20190415-WA0005.jpg" />
+    <None Include="Resources\IMG-20190415-WA0004.jpg" />
     <None Include="Resources\logo_mt_cl_transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
