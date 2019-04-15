@@ -7,13 +7,18 @@
         seatsTemp = seatsOri
         isLayoutEdited = False
         bindSeats()
+        For Each ctrl In grpSeat.Controls
+            If ctrl.GetType = GetType(Button) Then
+                Dim btn As Button = CType(ctrl, Button)
+                AddHandler btn.Click, AddressOf button_Click
+            End If
+        Next
     End Sub
 
     Private Sub bindSeats()
         For Each ctrl In grpSeat.Controls
             If ctrl.GetType = GetType(Button) Then
                 Dim btn As Button = CType(ctrl, Button)
-                AddHandler btn.Click, AddressOf button_Click
                 Dim seat As Seat = seatsTemp.Find(Function(p) p.SeatNo = btn.Name)
                 If seat.Status = "A" Then
                     btn.BackColor = Color.LightGreen
@@ -32,12 +37,12 @@
     Private Sub button_Click(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
         If btn.BackColor = Color.Gray Then
-            If seatsTemp.Find(Function(p) p.SeatNo = btn.Name).Status = "A" Then
-                btn.ForeColor = Color.Black
-                btn.BackColor = Color.LightGreen
-            Else
+            If seatsTemp.Find(Function(p) p.SeatNo = btn.Name).Status = "R" Then
                 btn.ForeColor = Color.Black
                 btn.BackColor = Color.Blue
+            Else
+                btn.ForeColor = Color.Black
+                btn.BackColor = Color.LightGreen
             End If
         Else
             btn.ForeColor = Color.White
@@ -53,6 +58,8 @@
                 Dim seat As Seat = seatsTemp.Find(Function(p) p.SeatNo = btn.Name)
                 If btn.BackColor = Color.LightGreen Then
                     seat.Status = "A"
+                ElseIf btn.BackColor = Color.Blue Then
+                    seat.Status = "R"
                 Else
                     seat.Status = "D"
                 End If

@@ -7,13 +7,18 @@
         seatsTemp = seatsOri
         isLayoutEdited = False
         bindSeats()
+        For Each ctrl In grpSeat.Controls
+            If ctrl.GetType = GetType(Button) Then
+                Dim btn As Button = CType(ctrl, Button)
+                AddHandler btn.Click, AddressOf button_Click
+            End If
+        Next
     End Sub
 
     Private Sub bindSeats()
         For Each ctrl In grpSeat.Controls
             If ctrl.GetType = GetType(Button) Then
                 Dim btn As Button = CType(ctrl, Button)
-                AddHandler btn.Click, AddressOf button_Click
                 Dim seat As Seat = seatsTemp.Find(Function(p) p.SeatNo = btn.Name)
                 If seat.Status = "A" Then
                     btn.BackColor = Color.LightGreen
