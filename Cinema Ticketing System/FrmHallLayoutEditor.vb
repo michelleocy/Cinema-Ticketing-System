@@ -26,8 +26,13 @@
     Private Sub button_Click(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
         If btn.BackColor = Color.Gray Then
-            btn.ForeColor = Color.Black
-            btn.BackColor = Color.LightGreen
+            If seatsTemp.Find(Function(p) p.SeatNo = btn.Name).Status = "A" Then
+                btn.ForeColor = Color.Black
+                btn.BackColor = Color.LightGreen
+            Else
+                btn.ForeColor = Color.Black
+                btn.BackColor = Color.Blue
+            End If
         Else
             btn.ForeColor = Color.White
             btn.BackColor = Color.Gray

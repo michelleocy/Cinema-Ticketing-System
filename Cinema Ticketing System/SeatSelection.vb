@@ -22,6 +22,9 @@
                 Dim seat As Seat = seats.Find(Function(p) p.SeatNo = btn.Name)
                 If seat.Status = "A" Then
                     btn.Visible = True
+                ElseIf seat.Status = "R" Then
+                    btn.BackColor = Color.Blue
+                    btn.Visible = True
                 Else
                     btn.Visible = False
                 End If

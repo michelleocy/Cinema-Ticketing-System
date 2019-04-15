@@ -318,7 +318,7 @@ Partial Class FrmManageHallSeat
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Location = New System.Drawing.Point(378, 532)
+        Me.GroupBox1.Location = New System.Drawing.Point(364, 532)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(152, 32)
         Me.GroupBox1.TabIndex = 17
@@ -329,13 +329,13 @@ Partial Class FrmManageHallSeat
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(99, 14)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(50, 13)
+        Me.Label17.Size = New System.Drawing.Size(52, 13)
         Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Deactive"
+        Me.Label17.Text = "Repairing"
         '
         'Label16
         '
-        Me.Label16.BackColor = System.Drawing.Color.Gray
+        Me.Label16.BackColor = System.Drawing.Color.Blue
         Me.Label16.Location = New System.Drawing.Point(74, 9)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(19, 20)

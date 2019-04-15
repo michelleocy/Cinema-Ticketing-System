@@ -1,6 +1,7 @@
 ﻿Imports System.Text
 Imports System.Drawing.Printing
 Imports System.Drawing.Printing.StandardPrintController
+Imports System.IO
 
 Public Class PurchaseConfirm
 
