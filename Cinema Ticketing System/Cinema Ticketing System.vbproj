@@ -125,6 +125,18 @@
     <Compile Include="FrmHallLayoutEditor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLoginList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmManageHallSeat.Designer.vb">
       <DependentUpon>FrmManageHallSeat.vb</DependentUpon>
     </Compile>
@@ -166,6 +178,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\FrmLoginList.Designer.vb" />
+    <Compile Include="My Project\FrmLoginPage.Designer.vb" />
+    <Compile Include="My Project\FrmLoginRegister.Designer.vb" />
+    <Compile Include="My Project\FrmLoginUpdate.Designer.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -258,6 +274,10 @@
     <EmbeddedResource Include="MakeBooking.resx">
       <DependentUpon>MakeBooking.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\FrmLoginList.resx" />
+    <EmbeddedResource Include="My Project\FrmLoginPage.resx" />
+    <EmbeddedResource Include="My Project\FrmLoginRegister.resx" />
+    <EmbeddedResource Include="My Project\FrmLoginUpdate.resx" />
     <EmbeddedResource Include="NewPurchase.resx">
       <DependentUpon>NewPurchase.vb</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +350,7 @@
     <Content Include="Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\cinema2.png" />
     <None Include="Resources\IMG-20190415-WA0003.jpg" />
     <None Include="Resources\IMG-20190415-WA0002.jpg" />
     <None Include="Resources\IMG-20190415-WA0001.jpg" />

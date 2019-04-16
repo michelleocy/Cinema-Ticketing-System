@@ -70,6 +70,29 @@ Public Class FrmGenerateReport
                 .DrawString(subHeader, fontSubHeader, Brushes.Black, 0, 80)
                 .DrawString(body.ToString, fontbody, Brushes.Black, 0, 160)
             End With
+        ElseIf cboReportType.Text = "Staff Report" Then
+            Dim header As String = "Staff Details Report"
+            Dim body As New StringBuilder()
+            Dim db As New demoDataContext
+
+            body.AppendLine("No  ID      Name                            IC")
+            body.AppendLine("--  ------  ------------------------------  --------------")
+
+            Dim rs = From i In db.Accounts
+            Dim cnt As Integer = 0
+            For Each item In rs
+                cnt += 1
+                body.AppendFormat("{0,2}  {1,6}  {2,-30}  {3,-14}" & vbNewLine,
+                                  cnt, item.Id, item.Name, item.Ic)
+            Next
+            body.AppendLine()
+            body.AppendFormat("{0,2} record(s)", cnt)
+
+            With e.Graphics
+                .DrawString(header, fontHeader, Brushes.Purple, 0, 0)
+                .DrawString(subHeader, fontSubHeader, Brushes.Black, 0, 80)
+                .DrawString(body.ToString, fontbody, Brushes.Black, 0, 160)
+            End With
         End If
     End Sub
 
@@ -166,6 +189,12 @@ Public Class FrmGenerateReport
     End Sub
 
     Private Sub cboReportType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReportType.SelectedIndexChanged
-
+        If cboReportType.Text = "Seat Report" Then
+            cboMonth.Enabled = True
+            cboYear.Enabled = True
+        ElseIf cboReportType.text = "Staff Report" Then
+            cboMonth.Enabled = False
+            cboYear.Enabled = False
+        End If
     End Sub
 End Class

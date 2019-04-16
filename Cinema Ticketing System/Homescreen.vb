@@ -38,4 +38,10 @@
         FrmGenerateReport.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
+        Me.Hide()
+        FrmLoginList.ShowDialog()
+        Me.Show()
+    End Sub
 End Class
