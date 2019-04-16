@@ -126,6 +126,30 @@
     <Compile Include="FrmHallLayoutEditor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLoginList.Designer.vb">
+      <DependentUpon>FrmLoginList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginPage.Designer.vb">
+      <DependentUpon>FrmLoginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginRegister.Designer.vb">
+      <DependentUpon>FrmLoginRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginUpdate.Designer.vb">
+      <DependentUpon>FrmLoginUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmManageHallSeat.Designer.vb">
       <DependentUpon>FrmManageHallSeat.vb</DependentUpon>
     </Compile>
@@ -273,6 +297,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHallLayoutEditor.resx">
       <DependentUpon>FrmHallLayoutEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginList.resx">
+      <DependentUpon>FrmLoginList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginPage.resx">
+      <DependentUpon>FrmLoginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginRegister.resx">
+      <DependentUpon>FrmLoginRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginUpdate.resx">
+      <DependentUpon>FrmLoginUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManageHallSeat.resx">
       <DependentUpon>FrmManageHallSeat.vb</DependentUpon>

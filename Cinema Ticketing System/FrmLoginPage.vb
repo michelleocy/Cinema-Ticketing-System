@@ -29,7 +29,7 @@
                         Return
                     End If
                     MessageBox.Show(" Login Successful! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Homescreen.Show()
+                    FrmLoginList.Show()
                     Me.Hide()
                 Else
                     MessageBox.Show("Wrong id ", "Login Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error)
