@@ -26,18 +26,21 @@ Partial Class Homescreen
         Me.mnuBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.lblInfo = New System.Windows.Forms.Label()
         Me.mnuHall = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMovie = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovieScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovieDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.mnuCinema.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuCinema
         '
         Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit})
+        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit, Me.mnuMovie})
         Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
         Me.mnuCinema.Name = "mnuCinema"
         Me.mnuCinema.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
@@ -64,11 +67,42 @@ Partial Class Homescreen
         Me.mnuBookingList.Size = New System.Drawing.Size(150, 22)
         Me.mnuBookingList.Text = "Booking &List"
         '
+        'mnuHall
+        '
+        Me.mnuHall.Name = "mnuHall"
+        Me.mnuHall.Size = New System.Drawing.Size(40, 20)
+        Me.mnuHall.Text = "H&all"
+        '
+        'mnuReport
+        '
+        Me.mnuReport.Name = "mnuReport"
+        Me.mnuReport.Size = New System.Drawing.Size(54, 20)
+        Me.mnuReport.Text = "R&eport"
+        '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.Size = New System.Drawing.Size(37, 20)
         Me.mnuExit.Text = "E&xit"
+        '
+        'mnuMovie
+        '
+        Me.mnuMovie.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovieScheduleToolStripMenuItem, Me.MovieDetailsToolStripMenuItem})
+        Me.mnuMovie.Name = "mnuMovie"
+        Me.mnuMovie.Size = New System.Drawing.Size(52, 20)
+        Me.mnuMovie.Text = "&Movie"
+        '
+        'MovieScheduleToolStripMenuItem
+        '
+        Me.MovieScheduleToolStripMenuItem.Name = "MovieScheduleToolStripMenuItem"
+        Me.MovieScheduleToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MovieScheduleToolStripMenuItem.Text = "Movie Schedule"
+        '
+        'MovieDetailsToolStripMenuItem
+        '
+        Me.MovieDetailsToolStripMenuItem.Name = "MovieDetailsToolStripMenuItem"
+        Me.MovieDetailsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MovieDetailsToolStripMenuItem.Text = "Movie Details"
         '
         'lblWelcome
         '
@@ -92,18 +126,6 @@ Partial Class Homescreen
         Me.lblInfo.TabIndex = 2
         Me.lblInfo.Text = "Click to start purchase!"
         '
-        'mnuHall
-        '
-        Me.mnuHall.Name = "mnuHall"
-        Me.mnuHall.Size = New System.Drawing.Size(40, 20)
-        Me.mnuHall.Text = "H&all"
-        '
-        'mnuReport
-        '
-        Me.mnuReport.Name = "mnuReport"
-        Me.mnuReport.Size = New System.Drawing.Size(54, 20)
-        Me.mnuReport.Text = "R&eport"
-        '
         'Homescreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,7 +135,7 @@ Partial Class Homescreen
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.mnuCinema)
         Me.MainMenuStrip = Me.mnuCinema
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Homescreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Homescreen"
@@ -133,4 +155,7 @@ Partial Class Homescreen
     Friend WithEvents lblInfo As Label
     Friend WithEvents mnuHall As ToolStripMenuItem
     Friend WithEvents mnuReport As ToolStripMenuItem
+    Friend WithEvents mnuMovie As ToolStripMenuItem
+    Friend WithEvents MovieScheduleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MovieDetailsToolStripMenuItem As ToolStripMenuItem
 End Class

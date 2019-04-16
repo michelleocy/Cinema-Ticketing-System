@@ -165,7 +165,5 @@ Public Class FrmGenerateReport
         cboMonth.SelectedIndex = 0
     End Sub
 
-    Private Sub cboReportType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReportType.SelectedIndexChanged
 
-    End Sub
 End Class

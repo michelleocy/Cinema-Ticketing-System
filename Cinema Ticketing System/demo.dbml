@@ -1,34 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="demoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="Cinema_Ticketing_System.My.MySettings" SettingsPropertyName="BookingConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Booking" Member="Bookings">
-    <Type Name="Booking">
-      <Column Name="BookingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CustomerName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="CustomerIC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="MovieScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="AmountOfPeople" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="BookingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Association Name="MovieSchedule_Booking" Member="MovieSchedule" ThisKey="MovieScheduleID" OtherKey="Id" Type="MovieSchedule" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Hall" Member="Halls">
     <Type Name="Hall">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Association Name="Hall_MovieSchedule" Member="MovieSchedules" ThisKey="Id" OtherKey="HallId" Type="MovieSchedule" />
       <Association Name="Hall_Seat" Member="Seats" ThisKey="Id" OtherKey="HallId" Type="Seat" />
+      <Association Name="Hall_MovieSchedule" Member="MovieSchedules" ThisKey="Id" OtherKey="HallId" Type="MovieSchedule" />
     </Type>
   </Table>
   <Table Name="dbo.Movie" Member="Movies">
     <Type Name="Movie">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MovieName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MovieRate" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="MovieDescription" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="MoviePoster" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Duration" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="MoviePoster" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Duration" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
       <Association Name="Movie_MovieSchedule" Member="MovieSchedules" ThisKey="Id" OtherKey="MovieID" Type="MovieSchedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchasedSeat" Member="PurchasedSeats">
+    <Type Name="PurchasedSeat">
+      <Column Name="PurchasedSeatID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeatNum" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Purchase_PurchasedSeat" Member="Purchase" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="Purchase" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Seat" Member="Seats">
+    <Type Name="Seat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeatNo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HallId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Hall_Seat" Member="Hall" ThisKey="HallId" OtherKey="Id" Type="Hall" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MovieSchedule" Member="MovieSchedules">
@@ -45,6 +52,17 @@
       <Association Name="Movie_MovieSchedule" Member="Movie" ThisKey="MovieID" OtherKey="Id" Type="Movie" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Booking" Member="Bookings">
+    <Type Name="Booking">
+      <Column Name="BookingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerIC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MovieScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AmountOfPeople" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BookingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="MovieSchedule_Booking" Member="MovieSchedule" ThisKey="MovieScheduleID" OtherKey="Id" Type="MovieSchedule" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Purchase" Member="Purchases">
     <Type Name="Purchase">
       <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -53,23 +71,6 @@
       <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
       <Association Name="Purchase_PurchasedSeat" Member="PurchasedSeats" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="PurchasedSeat" />
       <Association Name="MovieSchedule_Purchase" Member="MovieSchedule" ThisKey="MovieScheduleID" OtherKey="Id" Type="MovieSchedule" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Seat" Member="Seats">
-    <Type Name="Seat">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SeatNo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
-      <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="HallId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Hall_Seat" Member="Hall" ThisKey="HallId" OtherKey="Id" Type="Hall" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PurchasedSeat" Member="PurchasedSeats">
-    <Type Name="PurchasedSeat">
-      <Column Name="PurchasedSeatID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SeatNum" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
-      <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Purchase_PurchasedSeat" Member="Purchase" ThisKey="PurchaseID" OtherKey="PurchaseID" Type="Purchase" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

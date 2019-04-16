@@ -38,4 +38,16 @@
         FrmGenerateReport.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub MovieScheduleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovieScheduleToolStripMenuItem.Click
+        Me.Hide()
+        MovieScheduleList.Show()
+        Me.Show()
+    End Sub
+
+    Private Sub MovieDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovieDetailsToolStripMenuItem.Click
+        Me.Hide()
+        MovieList.Show()
+        Me.Show()
+    End Sub
 End Class
