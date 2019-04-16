@@ -44,6 +44,7 @@ Partial Class ViewBookingList
         Me.mnuHall = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgvBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,7 +158,7 @@ Partial Class ViewBookingList
         'mnuCinema
         '
         Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit})
+        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit, Me.StaffToolStripMenuItem})
         Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
         Me.mnuCinema.Name = "mnuCinema"
         Me.mnuCinema.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
@@ -201,6 +202,12 @@ Partial Class ViewBookingList
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.Size = New System.Drawing.Size(45, 24)
         Me.mnuExit.Text = "E&xit"
+        '
+        'StaffToolStripMenuItem
+        '
+        Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
+        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
+        Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'ViewBookingList
         '
@@ -253,4 +260,5 @@ Partial Class ViewBookingList
     Friend WithEvents mnuHall As ToolStripMenuItem
     Friend WithEvents mnuReport As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents StaffToolStripMenuItem As ToolStripMenuItem
 End Class

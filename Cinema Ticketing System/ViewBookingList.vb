@@ -138,29 +138,34 @@
 
     End Sub
 
-    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs) Handles mnuBookingMakeBooking.Click
+    Private Sub mnuBookingMakeBooking_Click(sender As Object, e As EventArgs)
 
         Me.Hide()
         MakeBooking.ShowDialog()
         Me.Show()
     End Sub
 
-    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
+    Private Sub mnuExit_Click(sender As Object, e As EventArgs)
 
         End
 
     End Sub
 
-    Private Sub mnuHall_Click(sender As Object, e As EventArgs) Handles mnuHall.Click
+    Private Sub mnuHall_Click(sender As Object, e As EventArgs)
         Me.Hide()
         FrmViewHall.ShowDialog()
         Me.Show()
     End Sub
 
-    Private Sub mnuReport_Click(sender As Object, e As EventArgs) Handles mnuReport.Click
+    Private Sub mnuReport_Click(sender As Object, e As EventArgs)
         Me.Hide()
         FrmGenerateReport.ShowDialog()
         Me.Show()
     End Sub
 
+    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
+        Me.Hide()
+        FrmLoginList.ShowDialog()
+        Me.Show()
+    End Sub
 End Class
