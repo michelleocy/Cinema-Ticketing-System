@@ -95,7 +95,7 @@ Partial Class FrmViewHall
         Me.Controls.Add(Me.dgvHallList)
         Me.Name = "FrmViewHall"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmViewHall"
+        Me.Text = "Hall List"
         CType(Me.dgvHallList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -3728,7 +3728,7 @@ Partial Class FrmManageHallSeat
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.grpSeat)
         Me.Name = "FrmManageHallSeat"
-        Me.Text = "FrmManageSeat"
+        Me.Text = "Manage Seat"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.grpSeat.ResumeLayout(False)

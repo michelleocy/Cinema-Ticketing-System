@@ -42,10 +42,22 @@
     Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuStaff.Click
         Me.Hide()
         FrmLoginList.ShowDialog()
-        Me.Show()
+        'Me.Show()
     End Sub
 
     Private Sub MnuMovieMovieSchedule_Click(sender As Object, e As EventArgs) Handles mnuMovieMovieSchedule.Click
+        Me.Hide()
+        MovieScheduleList.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub MnuMovieMovieList_Click(sender As Object, e As EventArgs) Handles mnuMovieMovieList.Click
+        Me.Hide()
+        MovieList.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub Homescreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

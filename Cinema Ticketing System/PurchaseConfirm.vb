@@ -31,7 +31,6 @@ Public Class PurchaseConfirm
 
         dlgPreview.Document = doc
         dlgPreview.ShowDialog(Me)
-        doc.Print()
 
     End Sub
 

@@ -139,6 +139,7 @@ Partial Class MovieAdd
         '
         'cboRate
         '
+        Me.cboRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRate.FormattingEnabled = True
         Me.cboRate.Items.AddRange(New Object() {"U", "PG13", "PG18"})
         Me.cboRate.Location = New System.Drawing.Point(129, 41)
@@ -156,6 +157,7 @@ Partial Class MovieAdd
         '
         'cboDuration
         '
+        Me.cboDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDuration.FormattingEnabled = True
         Me.cboDuration.Items.AddRange(New Object() {"1:20:00", "1:30:00", "1:45:00", "2:00:00", "2:30:00", "3:10:00"})
         Me.cboDuration.Location = New System.Drawing.Point(129, 471)

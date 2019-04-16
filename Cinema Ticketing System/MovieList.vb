@@ -30,13 +30,15 @@ Public Class MovieList
         End If
         lblDesc.Text = c.MovieDescription
 
-        Dim ImgByte As Byte() = Nothing
-        Dim img As Image
-        Dim stream As MemoryStream
-        ImgByte = c.MoviePoster.ToArray
-        stream = New MemoryStream(ImgByte, 0, ImgByte.Length)
-        img = Image.FromStream(stream)
-        picDesc.Image = img
+        If c.MoviePoster IsNot Nothing Then
+            Dim ImgByte As Byte() = Nothing
+            Dim img As Image
+            Dim stream As MemoryStream
+            ImgByte = c.MoviePoster.ToArray
+            stream = New MemoryStream(ImgByte, 0, ImgByte.Length)
+            img = Image.FromStream(stream)
+            picDesc.Image = img
+        End If
 
         lblMovDuration.Text = c.Duration
     End Sub
@@ -58,13 +60,10 @@ Public Class MovieList
     Private Sub BtnAdd_click(sender As Object, e As EventArgs) Handles btnAddMov.Click
         MovieAdd.Show()
         BindData()
+
     End Sub
     Private Sub BtnExitMov_Click(sender As Object, e As EventArgs) Handles btnExitMov.Click
         Me.Close()
-    End Sub
-
-    Private Sub BtnGenerate_Click(sender As Object, e As EventArgs) 
-
     End Sub
 
 End Class

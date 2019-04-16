@@ -42,9 +42,12 @@ Partial Class ViewBookingList
         Me.mnuBookingMakeBooking = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuBookingList = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHall = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuStaff = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMovie = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMovieMovieSchedule = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMovieMovieList = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgvBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BookingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,10 +63,11 @@ Partial Class ViewBookingList
         Me.dgvBooking.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.dgvBooking.DataSource = Me.BookingBindingSource
         Me.dgvBooking.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvBooking.Location = New System.Drawing.Point(12, 86)
+        Me.dgvBooking.Location = New System.Drawing.Point(9, 70)
+        Me.dgvBooking.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvBooking.Name = "dgvBooking"
         Me.dgvBooking.RowTemplate.Height = 24
-        Me.dgvBooking.Size = New System.Drawing.Size(748, 217)
+        Me.dgvBooking.Size = New System.Drawing.Size(561, 176)
         Me.dgvBooking.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -120,33 +124,37 @@ Partial Class ViewBookingList
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(12, 44)
+        Me.lblName.Location = New System.Drawing.Point(9, 36)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(57, 17)
+        Me.lblName.Size = New System.Drawing.Size(44, 13)
         Me.lblName.TabIndex = 1
         Me.lblName.Text = "Name : "
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(76, 41)
+        Me.txtName.Location = New System.Drawing.Point(57, 33)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(163, 22)
+        Me.txtName.Size = New System.Drawing.Size(123, 20)
         Me.txtName.TabIndex = 2
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(379, 31)
+        Me.btnDelete.Location = New System.Drawing.Point(284, 25)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(104, 42)
+        Me.btnDelete.Size = New System.Drawing.Size(78, 34)
         Me.btnDelete.TabIndex = 10
         Me.btnDelete.Text = "&Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnPreview
         '
-        Me.btnPreview.Location = New System.Drawing.Point(259, 31)
+        Me.btnPreview.Location = New System.Drawing.Point(194, 25)
+        Me.btnPreview.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPreview.Name = "btnPreview"
-        Me.btnPreview.Size = New System.Drawing.Size(104, 42)
+        Me.btnPreview.Size = New System.Drawing.Size(78, 34)
         Me.btnPreview.TabIndex = 14
         Me.btnPreview.Text = "&Preview"
         Me.btnPreview.UseVisualStyleBackColor = True
@@ -158,11 +166,11 @@ Partial Class ViewBookingList
         'mnuCinema
         '
         Me.mnuCinema.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuReport, Me.mnuExit, Me.StaffToolStripMenuItem})
+        Me.mnuCinema.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBooking, Me.mnuHall, Me.mnuStaff, Me.mnuMovie, Me.mnuReport, Me.mnuExit})
         Me.mnuCinema.Location = New System.Drawing.Point(0, 0)
         Me.mnuCinema.Name = "mnuCinema"
-        Me.mnuCinema.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.mnuCinema.Size = New System.Drawing.Size(772, 28)
+        Me.mnuCinema.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.mnuCinema.Size = New System.Drawing.Size(579, 24)
         Me.mnuCinema.TabIndex = 15
         Me.mnuCinema.Text = "MenuStrip1"
         '
@@ -170,56 +178,76 @@ Partial Class ViewBookingList
         '
         Me.mnuBooking.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBookingMakeBooking, Me.mnuBookingList})
         Me.mnuBooking.Name = "mnuBooking"
-        Me.mnuBooking.Size = New System.Drawing.Size(76, 24)
+        Me.mnuBooking.Size = New System.Drawing.Size(63, 20)
         Me.mnuBooking.Text = "&Booking"
         '
         'mnuBookingMakeBooking
         '
         Me.mnuBookingMakeBooking.Name = "mnuBookingMakeBooking"
-        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(179, 26)
+        Me.mnuBookingMakeBooking.Size = New System.Drawing.Size(150, 22)
         Me.mnuBookingMakeBooking.Text = "&Make Booking"
         '
         'mnuBookingList
         '
         Me.mnuBookingList.Name = "mnuBookingList"
-        Me.mnuBookingList.Size = New System.Drawing.Size(179, 26)
+        Me.mnuBookingList.Size = New System.Drawing.Size(150, 22)
         Me.mnuBookingList.Text = "Booking &List"
         '
         'mnuHall
         '
         Me.mnuHall.Name = "mnuHall"
-        Me.mnuHall.Size = New System.Drawing.Size(48, 24)
+        Me.mnuHall.Size = New System.Drawing.Size(40, 20)
         Me.mnuHall.Text = "H&all"
+        '
+        'mnuStaff
+        '
+        Me.mnuStaff.Name = "mnuStaff"
+        Me.mnuStaff.Size = New System.Drawing.Size(43, 20)
+        Me.mnuStaff.Text = "Staff"
+        '
+        'mnuMovie
+        '
+        Me.mnuMovie.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuMovieMovieSchedule, Me.mnuMovieMovieList})
+        Me.mnuMovie.Name = "mnuMovie"
+        Me.mnuMovie.Size = New System.Drawing.Size(52, 20)
+        Me.mnuMovie.Text = "Movie"
+        '
+        'mnuMovieMovieSchedule
+        '
+        Me.mnuMovieMovieSchedule.Name = "mnuMovieMovieSchedule"
+        Me.mnuMovieMovieSchedule.Size = New System.Drawing.Size(158, 22)
+        Me.mnuMovieMovieSchedule.Text = "Movie Schedule"
+        '
+        'mnuMovieMovieList
+        '
+        Me.mnuMovieMovieList.Name = "mnuMovieMovieList"
+        Me.mnuMovieMovieList.Size = New System.Drawing.Size(158, 22)
+        Me.mnuMovieMovieList.Text = "Movie List"
         '
         'mnuReport
         '
         Me.mnuReport.Name = "mnuReport"
-        Me.mnuReport.Size = New System.Drawing.Size(66, 24)
+        Me.mnuReport.Size = New System.Drawing.Size(54, 20)
         Me.mnuReport.Text = "R&eport"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(45, 24)
+        Me.mnuExit.Size = New System.Drawing.Size(37, 20)
         Me.mnuExit.Text = "E&xit"
-        '
-        'StaffToolStripMenuItem
-        '
-        Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
-        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
-        Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'ViewBookingList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 327)
+        Me.ClientSize = New System.Drawing.Size(579, 266)
         Me.Controls.Add(Me.mnuCinema)
         Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.dgvBooking)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "ViewBookingList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Booking List"
@@ -258,7 +286,10 @@ Partial Class ViewBookingList
     Friend WithEvents mnuBookingMakeBooking As ToolStripMenuItem
     Friend WithEvents mnuBookingList As ToolStripMenuItem
     Friend WithEvents mnuHall As ToolStripMenuItem
+    Friend WithEvents mnuStaff As ToolStripMenuItem
+    Friend WithEvents mnuMovie As ToolStripMenuItem
+    Friend WithEvents mnuMovieMovieSchedule As ToolStripMenuItem
+    Friend WithEvents mnuMovieMovieList As ToolStripMenuItem
     Friend WithEvents mnuReport As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
-    Friend WithEvents StaffToolStripMenuItem As ToolStripMenuItem
 End Class

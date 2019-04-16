@@ -38,11 +38,10 @@ Partial Class FrmGenerateReport
         '
         Me.cboReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboReportType.FormattingEnabled = True
-        Me.cboReportType.Items.AddRange(New Object() {"Seat Report", "Staff Report"})
-        Me.cboReportType.Location = New System.Drawing.Point(16, 31)
-        Me.cboReportType.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboReportType.Items.AddRange(New Object() {"Seat Report", "Staff Report", "Movie Report"})
+        Me.cboReportType.Location = New System.Drawing.Point(12, 25)
         Me.cboReportType.Name = "cboReportType"
-        Me.cboReportType.Size = New System.Drawing.Size(160, 24)
+        Me.cboReportType.Size = New System.Drawing.Size(121, 21)
         Me.cboReportType.TabIndex = 0
         '
         'cboMonth
@@ -50,18 +49,16 @@ Partial Class FrmGenerateReport
         Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMonth.Enabled = False
         Me.cboMonth.FormattingEnabled = True
-        Me.cboMonth.Location = New System.Drawing.Point(16, 158)
-        Me.cboMonth.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboMonth.Location = New System.Drawing.Point(12, 128)
         Me.cboMonth.Name = "cboMonth"
-        Me.cboMonth.Size = New System.Drawing.Size(160, 24)
+        Me.cboMonth.Size = New System.Drawing.Size(121, 21)
         Me.cboMonth.TabIndex = 1
         '
         'btnGenerate
         '
-        Me.btnGenerate.Location = New System.Drawing.Point(16, 209)
-        Me.btnGenerate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGenerate.Location = New System.Drawing.Point(12, 170)
         Me.btnGenerate.Name = "btnGenerate"
-        Me.btnGenerate.Size = New System.Drawing.Size(100, 28)
+        Me.btnGenerate.Size = New System.Drawing.Size(75, 23)
         Me.btnGenerate.TabIndex = 2
         Me.btnGenerate.Text = "Generate"
         Me.btnGenerate.UseVisualStyleBackColor = True
@@ -74,10 +71,9 @@ Partial Class FrmGenerateReport
         '
         Me.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Location = New System.Drawing.Point(16, 95)
-        Me.cboYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboYear.Location = New System.Drawing.Point(12, 77)
         Me.cboYear.Name = "cboYear"
-        Me.cboYear.Size = New System.Drawing.Size(160, 24)
+        Me.cboYear.Size = New System.Drawing.Size(121, 21)
         Me.cboYear.TabIndex = 3
         '
         'dlgPreview
@@ -93,38 +89,35 @@ Partial Class FrmGenerateReport
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 11)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 17)
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Report Type:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 75)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 61)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 17)
+        Me.Label2.Size = New System.Drawing.Size(74, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Choose Year: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 138)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(12, 112)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 17)
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Choose Month:"
         '
         'FrmGenerateReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(232, 270)
+        Me.ClientSize = New System.Drawing.Size(220, 219)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -132,7 +125,6 @@ Partial Class FrmGenerateReport
         Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.cboMonth)
         Me.Controls.Add(Me.cboReportType)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmGenerateReport"
         Me.Text = "Report"
         Me.ResumeLayout(False)

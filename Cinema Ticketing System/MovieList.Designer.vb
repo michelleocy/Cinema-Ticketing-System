@@ -162,7 +162,7 @@ Partial Class MovieList
         Me.Controls.Add(Me.btnExitMov)
         Me.Controls.Add(Me.btnAddMov)
         Me.Name = "MovieList"
-        Me.Text = "Form1"
+        Me.Text = "MovieList"
         CType(Me.dgvMovie, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDesc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

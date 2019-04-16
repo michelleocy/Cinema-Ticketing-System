@@ -139,3 +139,8 @@ C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\
 C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema Ticketing System.vbproj.CopyComplete
 C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.MovieScheduleAdd.resources
 C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.MovieScheduleList.resources
+C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmLoginList.resources
+C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmLoginPage.resources
+C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmLoginRegister.resources
+C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\obj\Debug\Cinema_Ticketing_System.FrmLoginUpdate.resources
+C:\Users\hong1\source\repos\Cinema-Ticketing-System\Cinema Ticketing System\bin\Debug\Database_log.ldf

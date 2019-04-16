@@ -139,7 +139,7 @@ Partial Class FrmUpdateHall
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmUpdateHall"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmUpdateHall"
+        Me.Text = "Update Hall"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

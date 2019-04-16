@@ -147,8 +147,6 @@
 
     Private Sub mnuExit_Click(sender As Object, e As EventArgs)
 
-        End
-
     End Sub
 
     Private Sub mnuHall_Click(sender As Object, e As EventArgs)
@@ -163,9 +161,21 @@
         Me.Show()
     End Sub
 
-    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
+    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuStaff.Click
         Me.Hide()
         FrmLoginList.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub MnuMovieMovieSchedule_Click(sender As Object, e As EventArgs) Handles mnuMovieMovieSchedule.Click
+        Me.Hide()
+        MovieScheduleList.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub MnuMovieMovieList_Click(sender As Object, e As EventArgs) Handles mnuMovieMovieList.Click
+        Me.Hide()
+        MovieList.ShowDialog()
         Me.Show()
     End Sub
 End Class

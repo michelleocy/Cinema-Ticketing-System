@@ -82,6 +82,7 @@ Public Class MovieAdd
         Dim str As String = "Movies is inserted"
         MessageBox.Show(str, "Insert", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ResetForm()
+        MovieList.dgvMovie.Refresh()
 
     End Sub
 

@@ -232,6 +232,8 @@ Partial Class FrmHallLayoutEditor
         Me.C07 = New System.Windows.Forms.Button()
         Me.J05 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.E04 = New System.Windows.Forms.Button()
@@ -308,8 +310,6 @@ Partial Class FrmHallLayoutEditor
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.grpSeat.SuspendLayout()
         Me.SuspendLayout()
@@ -2617,6 +2617,23 @@ Partial Class FrmHallLayoutEditor
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(99, 14)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(52, 13)
+        Me.Label19.TabIndex = 1
+        Me.Label19.Text = "Repairing"
+        '
+        'Label18
+        '
+        Me.Label18.BackColor = System.Drawing.Color.Blue
+        Me.Label18.Location = New System.Drawing.Point(74, 9)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(19, 20)
+        Me.Label18.TabIndex = 0
+        '
         'btnReset
         '
         Me.btnReset.Location = New System.Drawing.Point(9, 541)
@@ -3721,23 +3738,6 @@ Partial Class FrmHallLayoutEditor
         Me.Label2.Text = "A"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label18
-        '
-        Me.Label18.BackColor = System.Drawing.Color.Blue
-        Me.Label18.Location = New System.Drawing.Point(74, 9)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(19, 20)
-        Me.Label18.TabIndex = 0
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(99, 14)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(52, 13)
-        Me.Label19.TabIndex = 1
-        Me.Label19.Text = "Repairing"
-        '
         'FrmHallLayoutEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3750,7 +3750,7 @@ Partial Class FrmHallLayoutEditor
         Me.Controls.Add(Me.grpSeat)
         Me.Name = "FrmHallLayoutEditor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmEditHallLayouEditor"
+        Me.Text = "Layout Editor"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.grpSeat.ResumeLayout(False)

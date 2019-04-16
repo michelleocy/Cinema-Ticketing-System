@@ -32,6 +32,6 @@
         Dim frm = New FrmLoginPage
         frm.Show()
         Me.Close()
-
+        Homescreen.Close()
     End Sub
 End Class
