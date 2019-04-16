@@ -94,7 +94,7 @@ Public Class FrmGenerateReport
                 .DrawString(body.ToString, fontbody, Brushes.Black, 0, 160)
             End With
         Else
-            Dim header As String = "Staff Details Report"
+            Dim header As String = "Movie Details Report"
             Dim body As New StringBuilder()
             Dim db As New demoDataContext
 
